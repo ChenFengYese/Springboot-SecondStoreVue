@@ -1,0 +1,44 @@
+原页面:
+1.拟携程旅途页技术,完全仿真,复刻CSS布局
+2.JS实现流动布局显示,点击事件功能,定时显示功能
+3.内容设定以及分类概括
+4.Html+CSS+JS 使用nodeJS进行分离
+5.引用各类API实现数据展示
+
+后页面:
+
+1.定时器添加,分析各类资源加载情况,进行预布局浏览
+2.功能实现,资源缓存问题解决
+3.实现点击后展示原页面
+4.层级问题解决
+
+新页面:
+
+1.新的CSS布局
+2.布局分析以及资源信息分配
+3.实现途径调整以及页面跳转逻辑思考
+4.JS实现
+
+
+左边选择框
+id=leftSideNavLayer
+class=relativeLeftSideNavLayer
+的div部分
+
+第一部分
+id=header class=contract_bd 的div
+
+第二部分
+class=programme_detail_main_left
+旅游特色
+id=tourFeature class=programme_detail_type_mod
+甄选行程
+class=j_jouneyDaysDetail detail_content  
+id=jouneyDaysDetail
+费用说明
+class=programme_detail_type_mod 
+id=reservationNotes
+
+第三部分
+class=swan_four_advantage_cont 
+id=bottom_brand

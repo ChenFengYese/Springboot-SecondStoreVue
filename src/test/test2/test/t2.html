@@ -1,0 +1,366 @@
+<head lang="en">
+    <meta charset="utf-8">
+<style lang="less">
+  body {
+    background-size: 100% 130%;
+  }
+
+  #login_box {
+    width: 20%;
+    height: 400px;
+    background-color: #00000060;
+    margin: auto;
+    margin-top: 10%;
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px 50px;
+  }
+  .m-num {
+    min-width: 120px;
+    width: 120px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    .u-num {
+      color: #0f7af5;
+      font-size: 24px;
+    }
+  }
+  .slider {
+    height: auto;
+    min-width: 120px;
+    width: 120px;
+    margin: 30px auto 120px;
+  }
+  h2 {
+    margin-top: 5%;
+    color: #9ae5fa;
+  }
+
+  #input-box {
+    margin-top: 5%;
+    color: #9ae5fa;
+  }
+
+  span {
+    color: #9ae5fa;
+  }
+
+  div{height:100%;width:100%;overflow-x:hidden;overflow-y:hidden}
+  * {
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+  }
+
+
+  input {
+    border: 0;
+    width: 60%;
+    font-size: 15px;
+    color: #fff;
+    background: transparent;
+    border-bottom: 2px solid #fff;
+    padding: 5px 10px;
+    outline: none;
+    margin-top: 10px;
+  }
+
+  button {
+    margin-top: 50px;
+    width: 60%;
+    height: 30px;
+    border-radius: 10px;
+    border: 0;
+    color: #9ae5fa;
+    text-align: center;
+    line-height: 30px;
+    font-size: 15px;
+    background-image: linear-gradient(to right, #0c2f5b8f, #136076);
+  }
+
+  #sign_up {
+    margin-top: 45%;
+    margin-left: 60%;
+  }
+
+  a {
+    color: #9ae5fa;
+    text-decoration:none
+  }
+
+  label{
+    margin:10px;
+  }
+  .a-radio{
+    display: none;
+  }
+  .b-radio{
+    display: inline-block;
+    border:1px solid #ccc;
+    width:16px;
+    height: 16px;
+    border-radius:2px;
+    vertical-align: middle;
+    margin-right: 5px;
+    position: relative;
+  }
+  .b-radio:before{
+    content: '';
+    font-size: 0;
+    width: 10px;
+    height: 10px;
+    background: rgb(143, 188, 238);
+    position: absolute;
+    left:50%;
+    top:50%;
+    margin-left: -5px;
+    margin-top: -5px;
+    border-radius: 2px;
+    display: none;
+  }
+  .a-radio:checked~.b-radio:before{
+    display: block;
+  }
+  input::-webkit-input-placeholder {
+    /* placeholder颜色  */
+    color: #9ae5fa;
+    /* placeholder字体大小  */
+    font-size: 12px;
+  }
+  @themeColor: #9ae5fa;
+  .m-slider {
+    display: inline-block;
+    height: 4px;
+    padding: 6px 0;
+    position: relative;
+    z-index: 9;
+    cursor: pointer;
+    touch-action: none; // 禁用元素上的所有手势,使用自己的拖放和缩放api
+    min-width: 120px;
+    .u-slider-rail { // 灰色未选择滑动条背景色
+      position: absolute;
+      z-index: 99;
+      height: 4px;
+      width: 100%;
+      background: #9ae5fa;
+      border-radius: 2px;
+      transition: background .3s;
+    }
+    .u-slider-track { // 蓝色已选择滑动条背景色
+      position: absolute;
+      z-index: 99;
+      background: #9ae5fa;
+      border-radius: 4px;
+      height: 4px;
+      cursor: pointer;
+      transition: background .3s;
+      pointer-events: none;
+    }
+    &:hover {
+      .u-slider-rail { // 灰色未选择滑动条背景色
+        background: #E3E3E3;
+      }
+      .u-slider-track { // 蓝色已选择滑动条背景色
+        background: @themeColor;
+      }
+    }
+    .u-slider-handle { // 滑块
+      position: absolute;
+      z-index: 999;
+      width: 12px;
+      height: 12px;
+      top: 0px;
+      background: #fff;
+      border: 2px solid #91d5ff;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: border-color .3s,box-shadow .6s,transform .3s cubic-bezier(.18,.89,.32,1.28);
+      &:focus {
+        border-color: @themeColor;
+        box-shadow: 0 0 0 5px rgba(24, 144, 255, 0.2);
+      }
+      &:hover {
+        border-color: @themeColor;
+      }
+    }
+  }
+  .disabled {
+    cursor: not-allowed;
+    .u-slider-rail {
+      pointer-events: none;
+    }
+    .u-slider-track {
+      background: rgba(13, 180, 241, 0.25);
+    }
+    .u-slider-handle {
+      border-color: rgba(13, 180, 241, 0.25);
+      pointer-events: none;
+    }
+    &:hover {
+      .u-slider-track {
+        background: rgba(13, 180, 241, 0.25);
+      }
+    }
+  }
+</style>
+<script src="vue.js"></script>
+<title>Login</title>
+</head>
+<body>
+  <div style="width: 100%;height: 100%;background-color: rgba(204,204,204,0);position: fixed;top:0;bottom:0;right: 0;left: 0;text-align: center">
+    <iframe src="t1.html" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" name="mapFrame"
+            width="100%" height="100%" scrolling="no" frameborder="0"  style="position:absolute;right:0;width: 100%;height:100%;z-index: -1" id="iframe"></iframe>
+    <div id="login_box" style="left:100px;z-index: 9999;display: inline-block">
+      <h2>乡村振兴智慧系统</h2>
+      <div id="input_box">
+        <input type="text" id="name" name="name" v-model.trim="name" placeholder="请输入用户名">
+        <input  id="password" type="password" v-model.trim="password" placeholder="请输入密码">
+        <br><br><br><br>
+        <label for="user">
+          <input type="radio" id="user" name="identity" value="user" v-model="identity" class="a-radio">
+          <span class="b-radio"></span><span style="color: #9ae5fa">记住密码</span></label>
+        <label for="admin" style="visibility: hidden">
+          <input type="radio" id="admin" name="identity" value="admin" v-model="identityy" class="a-radio">
+          <span class="b-radio"></span><span style="color: #9ae5fa">管理员</span></label>
+        <button type="submit" onclick="login()">登录</button><br>
+        <button type="submit">
+          <router-link to="/register">立即注册</router-link>
+        </button><br>
+          <div class="slider">
+              <div :class="['m-slider', { disabled: false }]" @click="onClickPoint" ref="slider" :style="`width:120px;`">
+                  <div class="u-slider-rail"></div>
+                  <div class="u-slider-track" :style="`left: 20px; right: auto; width: 200px;`"></div>
+                  <div class="u-slider-handle" v-if="range" tabindex="0" ref="left" @mousedown="onLeftMouseDown" :style="`left: 20px; right: auto; transform: translateX(-50%);`"></div>
+                  <div class="u-slider-handle" tabindex="0" ref="right" @mousedown="onRightMouseDown" :style="`left: 20px; right: auto; transform: translateX(-50%);`"></div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+<script>
+
+  new Vue({
+    name: "UserLogin",
+    data() {
+      return {
+        name: '',
+        password: '',
+        identity: "user",
+        low: 20,
+        high: 80,
+        left: '', // 左滑块距离滑动条左端的距离
+        right: '', // 右滑动距离滑动条左端的距离
+      };
+    },
+    computed: {
+          scale () {
+              return this.width / (this.max - this.min)
+          },
+          low () {
+              return Math.round(this.left / this.scale + this.min)
+          },
+          high () {
+              return Math.round(this.right / this.scale + this.min)
+          }
+      },
+    watch: {
+          low (to) {
+              this.$emit('lowChange', to) // 左滑块对应数字回调
+          },
+          high (to) {
+              this.$emit('highChange', to) // 右滑块对应数字回调
+          }
+      },
+    mounted () {
+          this.left = this.range ? (this.initialMin - this.min) * this.scale : 0
+          this.right = (this.initialMax - this.min) * this.scale
+      },
+    methods: {
+        onClickPoint (e) { // 点击滑动条，移动滑块
+            // 元素是absolute时，e.layerX是相对于自身元素左上角的水平位置
+            var moveX = e.layerX // 鼠标点击位置距离滑动输入条左端的水平距离
+            if (this.range) { // 双滑块模式
+                if (moveX <= this.left) {
+                    this.left = moveX
+                } else if (moveX >= this.right) {
+                    this.right = moveX
+                } else {
+                    if ((moveX - this.left) < (this.right - moveX)) {
+                        this.left = moveX
+                    } else {
+                        this.right = moveX
+                    }
+                }
+            } else { // 单滑块模式
+                this.right = moveX
+            }
+        },
+        onLeftMouseDown () { // 在滚动条上拖动左滑块
+            var leftX = this.$refs.slider.getBoundingClientRect().left // 滑动条左端距离屏幕可视区域左边界的距离
+            document.onmousemove = (e) => {
+                // e.clientX返回事件被触发时鼠标指针相对于浏览器可视窗口的水平坐标
+                var moveX = e.clientX - leftX
+                if (moveX < 0) {
+                    this.left = 0
+                } else if (moveX >= this.right) {
+                    this.left = this.right
+                } else {
+                    this.left = moveX
+                }
+            }
+            document.onmouseup = () => {
+                document.onmousemove = null
+            }
+        },
+        onRightMouseDown () { // 在滚动条上拖动右滑块
+            var leftX = this.$refs.slider.getBoundingClientRect().left // 滑动条左端距离屏幕可视区域左边界的距离
+            document.onmousemove = (e) => {
+                // e.clientX返回事件被触发时鼠标指针相对于浏览器可视窗口的水平坐标
+                var moveX = e.clientX - leftX
+                if (moveX > this.width) {
+                    this.right = this.width
+                } else if (moveX <= this.left) {
+                    this.right = this.left
+                } else {
+                    this.right = moveX
+                }
+            }
+            document.onmouseup = () => {
+                document.onmousemove = null
+            }
+        },
+      lowChange (val) {
+        this.low = val
+        this.test(val)
+
+      },
+      highChange (val) {
+        this.high = val
+        var test_ = document.getElementById("iframe")
+        test_.contentWindow.postMessage((-80+val*2)+'', 'https://www.nahida-elysia.asia/Login_Back/index.html');
+        // window.addEventListener('message',(e) => {
+        //   console.log(e.data);
+        // }, false);
+      },
+      test(val){
+
+        document.getElementById("login_box").style.left = 100+val+"px"
+        // console.log(test_.contentDocument||test_.contentWindow.document)
+      },
+    }})
+  function login(){this.name = document.getElementById("name").value;this.password  = document.getElementById("password").value;this.identity = document.getElementById("identity");if(this.name==="admin"&&this.password==="admin"){document.location.href = "t4.html";}}
+  function checkForm(){
+      if(!this.name || !this.password){
+          this.$message("用户名和密码不能为空");
+          return false;
+      }
+      return true;
+  }
+</script>
+

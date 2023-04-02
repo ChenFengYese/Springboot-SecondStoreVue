@@ -1,0 +1,2225 @@
+<html style="overflow: hidden; cursor: default;"><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>渡江战役胜利暨南京解放云展览</title>
+
+    <!-- twitter share-->
+    <!-- <meta name="twitter:title" content="Click to visit the amazing 4D Virtual Tour">
+    <meta name="twitter:description" content="Immersive and interactive walkthrough experience in 3D space">
+    <meta name="twitter:image" content="https://beyond.3dnest.biz/silversea/assets/share/share_bg2.png"> -->
+    <!-- FaceBook share and google+ share-->
+    <!-- <meta property="og:type" content="article" />
+    <meta property="og:title" content="Click to visit the amazing 4D Virtual Tour" />
+    <meta property="og:description" content="Immersive and interactive walkthrough experience in 3D space" />
+    <meta property="og:image:secure_url" content="https://beyond.3dnest.biz/silversea/assets/share/share_bg2.png" />
+    <meta property="og:image" itemprop="image" content="https://beyond.3dnest.biz/silversea/assets/share/share_bg2.png" />
+    <meta property="og:image:url" itemprop="image" content="https://beyond.3dnest.biz/silversea/assets/share/share_bg2.png" />
+    <meta property="og:image:type" content="image/png" /> -->
+
+
+    <style>
+        video#panoVideo {
+            /* display: none; */
+            mix-blend-mode: screen;
+            position: absolute;
+            object-fit: fill;
+            top: 0;
+        }
+
+        #pano-x-handle,
+        #pano-y-handle,
+        #pano-z-handle,
+        #pano-scale-handle {
+            width: 30px;
+            text-align: center;
+            overflow: hidden;
+            padding: 0 3px;
+        }
+    </style>
+    <script src="./test.js"></script>
+    <script>
+        function iFrameHeight() {
+            var ifm = document.getElementById("iframepage");
+            // var subWeb = document.frames ? document.frames["iframepage"].document : ifm.contentDocument;
+            var ifmBox = document.getElementById("iframeBox");
+            var scroll;
+            // iframeBox
+            if (ifm != null && ifmBox != null) {
+                // ifm.height = subWeb.body.scrollHeight;
+                // ifm.width = subWeb.body.scrollWidth;
+                ifm.heihgt = ifmBox.height;
+                // ifm.width = ifmBox.width; //ie打不开做兼容
+                var browser = {
+                    versions: function () {
+                        var u = navigator.userAgent, app = navigator.appVersion;
+                        return {
+                            trident: u.indexOf('Trident') > -1, //IE内核
+                        };
+                    }(),
+                    language: (navigator.browserLanguage || navigator.language).toLowerCase()
+                }
+                if(!browser.versions.trident){
+                    ifm.width = ifmBox.width;
+                }
+            }
+
+            if (navigator.userAgent.match(/(iPod|iPhone|iPad)/)) {
+                // wrapper.addClass('ios');
+                scrolling = 'auto';
+            } else {
+                scrolling = 'auto';
+            }
+            ifm.scrolling = scrolling;
+        }
+        window.iFrameHeight = iFrameHeight;
+    </script>
+    <!--deploy start-->
+    <link rel="stylesheet" href="https://beyond.3dnest.cn/release/main.css?v=4.84.1">
+    <link rel="stylesheet" href="https://beyond.3dnest.cn/css/barrager.css?v=4.84.1">
+    <!--deploy end-->
+    <!-- debug start -->
+    <!--<link rel="stylesheet/less" type="text/css" href="less/main.less"/>-->
+    <!--<script src="./test.js"></script>-->
+    <!--debug end-->
+    <!-- jweixin by ncz-->
+    <!-- <script src="./test.js"></script>
+     -->
+    <script src="./test.js"></script>
+    <!-- zhuge 诸葛统计 by ncz -->
+    <!-- <script src="./test.js"></script> -->
+    <script>
+        console.info('isWeixin', /MicroMessenger/i.test(navigator.userAgent));
+        console.info('======版本号=======', 'v20210909-v1');
+    </script>
+    <style>#__vconsole {
+        color: #000;
+        font-size: 13px;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        /* global */
+        /* compoment */
+    }
+    #__vconsole .vc-max-height {
+        max-height: 19.23076923em;
+    }
+    #__vconsole .vc-max-height-line {
+        max-height: 3.38461538em;
+    }
+    #__vconsole .vc-min-height {
+        min-height: 3.07692308em;
+    }
+    #__vconsole dd,
+    #__vconsole dl,
+    #__vconsole pre {
+        margin: 0;
+    }
+    #__vconsole .vc-switch {
+        display: block;
+        position: fixed;
+        right: 0.76923077em;
+        bottom: 0.76923077em;
+        color: #FFF;
+        background-color: #04BE02;
+        line-height: 1;
+        font-size: 1.07692308em;
+        padding: 0.61538462em 1.23076923em;
+        z-index: 10000;
+        border-radius: 0.30769231em;
+        box-shadow: 0 0 0.61538462em rgba(0, 0, 0, 0.4);
+    }
+    #__vconsole .vc-mask {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0);
+        z-index: 10001;
+        transition: background 0.3s;
+        -webkit-tap-highlight-color: transparent;
+        overflow-y: scroll;
+    }
+    #__vconsole .vc-panel {
+        display: none;
+        position: fixed;
+        min-height: 85%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 10002;
+        background-color: #EFEFF4;
+        -webkit-transition: -webkit-transform 0.3s;
+        transition: -webkit-transform 0.3s;
+        transition: transform 0.3s;
+        transition: transform 0.3s, -webkit-transform 0.3s;
+        -webkit-transform: translate(0, 100%);
+        transform: translate(0, 100%);
+    }
+    #__vconsole .vc-tabbar {
+        border-bottom: 1px solid #D9D9D9;
+        overflow-x: auto;
+        height: 3em;
+        width: auto;
+        white-space: nowrap;
+    }
+    #__vconsole .vc-tabbar .vc-tab {
+        display: inline-block;
+        line-height: 3em;
+        padding: 0 1.15384615em;
+        border-right: 1px solid #D9D9D9;
+        text-decoration: none;
+        color: #000;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+    #__vconsole .vc-tabbar .vc-tab:active {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    #__vconsole .vc-tabbar .vc-tab.vc-actived {
+        background-color: #FFF;
+    }
+    #__vconsole .vc-content {
+        background-color: #FFF;
+        overflow-x: hidden;
+        overflow-y: auto;
+        position: absolute;
+        top: 3.07692308em;
+        left: 0;
+        right: 0;
+        bottom: 3.07692308em;
+        -webkit-overflow-scrolling: touch;
+        margin-bottom: constant(safe-area-inset-bottom);
+        margin-bottom: env(safe-area-inset-bottom);
+    }
+    #__vconsole .vc-content.vc-has-topbar {
+        top: 5.46153846em;
+    }
+    #__vconsole .vc-topbar {
+        background-color: #FBF9FE;
+        display: flex;
+        display: -webkit-box;
+        flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-box-direction: row;
+        -webkit-flex-wrap: wrap;
+        width: 100%;
+    }
+    #__vconsole .vc-topbar .vc-toptab {
+        display: none;
+        flex: 1;
+        -webkit-box-flex: 1;
+        line-height: 2.30769231em;
+        padding: 0 1.15384615em;
+        border-bottom: 1px solid #D9D9D9;
+        text-decoration: none;
+        text-align: center;
+        color: #000;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
+    #__vconsole .vc-topbar .vc-toptab.vc-toggle {
+        display: block;
+    }
+    #__vconsole .vc-topbar .vc-toptab:active {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    #__vconsole .vc-topbar .vc-toptab.vc-actived {
+        border-bottom: 1px solid #3e82f7;
+    }
+    #__vconsole .vc-logbox {
+        display: none;
+        position: relative;
+        min-height: 100%;
+    }
+    #__vconsole .vc-logbox i {
+        font-style: normal;
+    }
+    #__vconsole .vc-logbox .vc-log {
+        padding-bottom: 3em;
+        -webkit-tap-highlight-color: transparent;
+    }
+    #__vconsole .vc-logbox .vc-log:empty:before {
+        content: "Empty";
+        color: #999;
+        position: absolute;
+        top: 45%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 1.15384615em;
+        text-align: center;
+    }
+    #__vconsole .vc-logbox .vc-item {
+        margin: 0;
+        padding: 0.46153846em 0.61538462em;
+        overflow: hidden;
+        line-height: 1.3;
+        border-bottom: 1px solid #EEE;
+        word-break: break-word;
+    }
+    #__vconsole .vc-logbox .vc-item-info {
+        color: #6A5ACD;
+    }
+    #__vconsole .vc-logbox .vc-item-debug {
+        color: #DAA520;
+    }
+    #__vconsole .vc-logbox .vc-item-warn {
+        color: #FFA500;
+        border-color: #FFB930;
+        background-color: #FFFACD;
+    }
+    #__vconsole .vc-logbox .vc-item-error {
+        color: #DC143C;
+        border-color: #F4A0AB;
+        background-color: #FFE4E1;
+    }
+    #__vconsole .vc-logbox .vc-log.vc-log-partly .vc-item {
+        display: none;
+    }
+    #__vconsole .vc-logbox .vc-log.vc-log-partly-log .vc-item-log,
+    #__vconsole .vc-logbox .vc-log.vc-log-partly-info .vc-item-info,
+    #__vconsole .vc-logbox .vc-log.vc-log-partly-warn .vc-item-warn,
+    #__vconsole .vc-logbox .vc-log.vc-log-partly-error .vc-item-error {
+        display: block;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-item-content {
+        margin-right: 4.61538462em;
+        display: inline-block;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-item-repeat {
+        display: inline-block;
+        margin-right: 0.30769231em;
+        padding: 0 6.5px;
+        color: #D7E0EF;
+        background-color: #42597F;
+        border-radius: 8.66666667px;
+    }
+    #__vconsole .vc-logbox .vc-item.vc-item-error .vc-item-repeat {
+        color: #901818;
+        background-color: #DC2727;
+    }
+    #__vconsole .vc-logbox .vc-item.vc-item-warn .vc-item-repeat {
+        color: #987D20;
+        background-color: #F4BD02;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-item-code {
+        display: block;
+        white-space: pre-wrap;
+        overflow: auto;
+        position: relative;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-input,
+    #__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-output {
+        padding-left: 0.92307692em;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-input:before,
+    #__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-output:before {
+        content: "›";
+        position: absolute;
+        top: -0.23076923em;
+        left: 0;
+        font-size: 1.23076923em;
+        color: #6A5ACD;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-item-code.vc-item-code-output:before {
+        content: "‹";
+    }
+    #__vconsole .vc-logbox .vc-item .vc-fold {
+        display: block;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer {
+        display: block;
+        font-style: italic;
+        padding-left: 0.76923077em;
+        position: relative;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer:active {
+        background-color: #E6E6E6;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer:before {
+        content: "";
+        position: absolute;
+        top: 0.30769231em;
+        left: 0.15384615em;
+        width: 0;
+        height: 0;
+        border: transparent solid 0.30769231em;
+        border-left-color: #000;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer.vc-toggle:before {
+        top: 0.46153846em;
+        left: 0;
+        border-top-color: #000;
+        border-left-color: transparent;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-inner {
+        display: none;
+        margin-left: 0.76923077em;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-inner.vc-toggle {
+        display: block;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-inner .vc-code-key {
+        margin-left: 0.76923077em;
+    }
+    #__vconsole .vc-logbox .vc-item .vc-fold .vc-fold-outer .vc-code-key {
+        margin-left: 0;
+    }
+    #__vconsole .vc-logbox .vc-code-key {
+        color: #905;
+    }
+    #__vconsole .vc-logbox .vc-code-private-key {
+        color: #D391B5;
+    }
+    #__vconsole .vc-logbox .vc-code-function {
+        color: #905;
+        font-style: italic;
+    }
+    #__vconsole .vc-logbox .vc-code-number,
+    #__vconsole .vc-logbox .vc-code-boolean {
+        color: #0086B3;
+    }
+    #__vconsole .vc-logbox .vc-code-string {
+        color: #183691;
+    }
+    #__vconsole .vc-logbox .vc-code-null,
+    #__vconsole .vc-logbox .vc-code-undefined {
+        color: #666;
+    }
+    #__vconsole .vc-logbox .vc-cmd {
+        position: absolute;
+        height: 3.07692308em;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-top: 1px solid #D9D9D9;
+        display: block!important;
+    }
+    #__vconsole .vc-logbox .vc-cmd .vc-cmd-input-wrap {
+        display: block;
+        height: 2.15384615em;
+        margin-right: 3.07692308em;
+        padding: 0.46153846em 0.61538462em;
+    }
+    #__vconsole .vc-logbox .vc-cmd .vc-cmd-input {
+        width: 100%;
+        border: none;
+        resize: none;
+        outline: none;
+        padding: 0;
+        font-size: 0.92307692em;
+    }
+    #__vconsole .vc-logbox .vc-cmd .vc-cmd-input::-webkit-input-placeholder {
+        line-height: 2.15384615em;
+    }
+    #__vconsole .vc-logbox .vc-cmd .vc-cmd-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 3.07692308em;
+        border: none;
+        background-color: #EFEFF4;
+        outline: none;
+        -webkit-touch-callout: none;
+        font-size: 1em;
+    }
+    #__vconsole .vc-logbox .vc-cmd .vc-cmd-btn:active {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    #__vconsole .vc-logbox .vc-cmd .vc-cmd-prompted {
+        position: fixed;
+        width: 100%;
+        background-color: #FBF9FE;
+        border: 1px solid #D9D9D9;
+        overflow-x: scroll;
+        display: none;
+    }
+    #__vconsole .vc-logbox .vc-cmd .vc-cmd-prompted li {
+        list-style: none;
+        line-height: 30px;
+        padding: 0 0.46153846em;
+        border-bottom: 1px solid #D9D9D9;
+    }
+    #__vconsole .vc-logbox .vc-group .vc-group-preview {
+        -webkit-touch-callout: none;
+    }
+    #__vconsole .vc-logbox .vc-group .vc-group-preview:active {
+        background-color: #E6E6E6;
+    }
+    #__vconsole .vc-logbox .vc-group .vc-group-detail {
+        display: none;
+        padding: 0 0 0.76923077em 1.53846154em;
+        border-bottom: 1px solid #EEE;
+    }
+    #__vconsole .vc-logbox .vc-group.vc-actived .vc-group-detail {
+        display: block;
+        background-color: #FBF9FE;
+    }
+    #__vconsole .vc-logbox .vc-group.vc-actived .vc-table-row {
+        background-color: #FFF;
+    }
+    #__vconsole .vc-logbox .vc-group.vc-actived .vc-group-preview {
+        background-color: #FBF9FE;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-row {
+        display: flex;
+        display: -webkit-flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        -webkit-box-direction: row;
+        -webkit-flex-wrap: wrap;
+        overflow: hidden;
+        border-bottom: 1px solid #EEE;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-row.vc-left-border {
+        border-left: 1px solid #EEE;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-col {
+        flex: 1;
+        -webkit-box-flex: 1;
+        padding: 0.23076923em 0.30769231em;
+        border-left: 1px solid #EEE;
+        overflow: auto;
+        white-space: pre-wrap;
+        word-break: break-word;
+        /*white-space: nowrap;
+              text-overflow: ellipsis;*/
+        -webkit-overflow-scrolling: touch;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-col:first-child {
+        border: none;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-small .vc-table-col {
+        padding: 0 0.30769231em;
+        font-size: 0.92307692em;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-col-2 {
+        flex: 2;
+        -webkit-box-flex: 2;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-col-3 {
+        flex: 3;
+        -webkit-box-flex: 3;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-col-4 {
+        flex: 4;
+        -webkit-box-flex: 4;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-col-5 {
+        flex: 5;
+        -webkit-box-flex: 5;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-col-6 {
+        flex: 6;
+        -webkit-box-flex: 6;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-row-error {
+        border-color: #F4A0AB;
+        background-color: #FFE4E1;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-row-error .vc-table-col {
+        color: #DC143C;
+        border-color: #F4A0AB;
+    }
+    #__vconsole .vc-logbox .vc-table .vc-table-col-title {
+        font-weight: bold;
+    }
+    #__vconsole .vc-logbox.vc-actived {
+        display: block;
+    }
+    #__vconsole .vc-toolbar {
+        border-top: 1px solid #D9D9D9;
+        line-height: 3em;
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        display: -webkit-box;
+        flex-direction: row;
+        -webkit-box-direction: row;
+    }
+    #__vconsole .vc-toolbar .vc-tool {
+        display: none;
+        text-decoration: none;
+        color: #000;
+        width: 50%;
+        flex: 1;
+        -webkit-box-flex: 1;
+        text-align: center;
+        position: relative;
+        -webkit-touch-callout: none;
+    }
+    #__vconsole .vc-toolbar .vc-tool.vc-toggle,
+    #__vconsole .vc-toolbar .vc-tool.vc-global-tool {
+        display: block;
+    }
+    #__vconsole .vc-toolbar .vc-tool:active {
+        background-color: rgba(0, 0, 0, 0.15);
+    }
+    #__vconsole .vc-toolbar .vc-tool:after {
+        content: " ";
+        position: absolute;
+        top: 0.53846154em;
+        bottom: 0.53846154em;
+        right: 0;
+        border-left: 1px solid #D9D9D9;
+    }
+    #__vconsole .vc-toolbar .vc-tool-last:after {
+        border: none;
+    }
+    @supports (bottom: constant(safe-area-inset-bottom)) or (bottom: env(safe-area-inset-bottom)) {
+        #__vconsole .vc-toolbar,
+        #__vconsole .vc-switch {
+            bottom: constant(safe-area-inset-bottom);
+            bottom: env(safe-area-inset-bottom);
+        }
+    }
+    #__vconsole.vc-toggle .vc-switch {
+        display: none;
+    }
+    #__vconsole.vc-toggle .vc-mask {
+        background: rgba(0, 0, 0, 0.6);
+        display: block;
+    }
+    #__vconsole.vc-toggle .vc-panel {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+    }
+    </style><style>/* color */
+.vcelm-node {
+    color: #183691;
+}
+.vcelm-k {
+    color: #0086B3;
+}
+.vcelm-v {
+    color: #905;
+}
+/* layout */
+.vcelm-l {
+    padding-left: 8px;
+    position: relative;
+    word-wrap: break-word;
+    line-height: 1;
+}
+/*.vcelm-l.vcelm-noc {
+  padding-left: 0;
+}*/
+.vcelm-l.vc-toggle > .vcelm-node {
+    display: block;
+}
+.vcelm-l .vcelm-node:active {
+    background-color: rgba(0, 0, 0, 0.15);
+}
+.vcelm-l.vcelm-noc .vcelm-node:active {
+    background-color: transparent;
+}
+.vcelm-t {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+/* level */
+.vcelm-l .vcelm-l {
+    display: none;
+}
+.vcelm-l.vc-toggle > .vcelm-l {
+    margin-left: 4px;
+    display: block;
+}
+/* arrow */
+.vcelm-l:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 6px;
+    left: 3px;
+    width: 0;
+    height: 0;
+    border: transparent solid 3px;
+    border-left-color: #000;
+}
+.vcelm-l.vc-toggle:before {
+    display: block;
+    top: 6px;
+    left: 0;
+    border-top-color: #000;
+    border-left-color: transparent;
+}
+.vcelm-l.vcelm-noc:before {
+    display: none;
+}
+</style><link rel="stylesheet" href="./test.css" rel="external nofollow" ><link rel="stylesheet" href="./test.css" rel="external nofollow" ></head>
+
+<body style="overflow: hidden; touch-action: none;">
+<!--<div class="third-model-dialog" style="display: none;">-->
+<!--<iframe width="100%" height="100%" src="" id="third-model-iframe">-->
+<!--</iframe>-->
+<!--</div>-->
+<div></div>
+<!-- 全景视频 -->
+<div class="controlGUI" id="controlGUI" style="display: none;">
+    <div class="setting_item_layui">
+        <div class="close"><span class="close-controlgui-win"></span></div>
+        <div class="setting_item_title"><div><span class="title" id="setting_item_name_title">名称及ID</span><span><input type="text" id="setting_item_name"></span><span class="setting_item_ID"><input type="text" id="setting_item_id" readonly=""></span></div></div>
+        <div class="setting_item_title"><div><span class="title" id="setting_item_accord_title">坐标</span><span></span><span></span></div></div>
+        <div class="setting_item_content">
+            <div><span id="setting_item_accord_xtitle" class="xaxis">X轴坐标</span>
+                <span><i class="setting_item_minus" id="setting_item_accord_x_minus"></i><input type="number" id="setting_item_accord_x"><i class="setting_item_add" id="setting_item_accord_x_add"></i></span>
+                <span>
+                        <select id="setting_item_accord_x_step">
+                            <option value="0.001">0.001</option>
+                            <option value="0.01" selected="">0.01</option>
+                            <option value="0.1">0.1</option>
+                        </select>
+                    </span>
+            </div>
+            <div><span id="setting_item_accord_ytitle" class="yaxis">Y轴坐标</span><span><i class="setting_item_minus" id="setting_item_accord_y_minus"></i><input type="number" id="setting_item_accord_y"><i class="setting_item_add" id="setting_item_accord_y_add"></i></span>
+                <span>
+                        <select id="setting_item_accord_y_step">
+                            <option value="0.001">0.001</option>
+                            <option value="0.01" selected="">0.01</option>
+                            <option value="0.1">0.1</option>
+                        </select>
+                    </span>
+            </div>
+            <div><span id="setting_item_accord_ztitle" class="zaxis">Z轴坐标</span><span><i class="setting_item_minus" id="setting_item_accord_z_minus"></i><input type="number" id="setting_item_accord_z"><i class="setting_item_add" id="setting_item_accord_z_add"></i></span>
+                <span>
+                        <select id="setting_item_accord_z_step">
+                            <option value="0.001">0.001</option>
+                            <option value="0.01" selected="">0.01</option>
+                            <option value="0.1">0.1</option>
+                        </select>
+                    </span>
+            </div>
+        </div>
+        <div class="setting_item_title is_2DModel"><div><span class="title" id="setting_item_size_title">物体大小</span><span></span><span></span></div></div>
+        <div class="setting_item_content is_2DModel">
+            <div><span id="setting_item_size_wtitle">宽度</span><span><i class="setting_item_minus" id="setting_item_size_w_minus"></i><input type="number" id="setting_item_size_w"><i class="setting_item_add" id="setting_item_size_w_add"></i></span>
+                <span>
+                        <select id="setting_item_size_w_step">
+                            <option value="0.001">0.001</option>
+                            <option value="0.01" selected="">0.01</option>
+                            <option value="0.1">0.1</option>
+                        </select>
+                    </span>
+            </div>
+            <div><span id="setting_item_size_htitle">高度</span><span><i class="setting_item_minus" id="setting_item_size_h_minus"></i><input type="number" id="setting_item_size_h"><i class="setting_item_add" id="setting_item_size_h_add"></i></span>
+                <span>
+                        <select id="setting_item_size_h_step">
+                            <option value="0.001">0.001</option>
+                            <option value="0.01" selected="">0.01</option>
+                            <option value="0.1">0.1</option>
+                        </select>
+                    </span>
+            </div>
+            <div style="display: none;"><span id="setting_item_size_dtitle">深度</span><span><i class="setting_item_minus" id="setting_item_size_d_minus"></i><input type="number" id="setting_item_size_d"><i class="setting_item_add" id="setting_item_size_d_add"></i></span>
+                <span>
+                        <select id="setting_item_size_d_step">
+                            <option value="0.001">0.001</option>
+                            <option value="0.01" selected="">0.01</option>
+                            <option value="0.1">0.1</option>
+                        </select>
+                    </span>
+            </div>
+        </div>
+        <div class="setting_item_title"><div><span class="title" id="setting_item_scale_title">物体缩放</span><span></span><span></span></div></div>
+        <div class="setting_item_content">
+            <div><span id="setting_item_scale_vtitle">缩放系数</span><span><i class="setting_item_minus" id="setting_item_media_scale_minus"></i><input type="number" id="setting_item_media_scale" step="0.01"><i class="setting_item_add" id="setting_item_media_scale_add"></i></span>
+                <span>
+                        <select id="setting_item_media_scale_step">
+                            <option value="0.001">0.001</option>
+                            <option value="0.01" selected="">0.01</option>
+                            <option value="0.1">0.1</option>
+                        </select>
+                    </span>
+            </div>
+        </div>
+        <div class="setting_item_title"><div><span class="title" id="setting_item_rotation_title">旋转角度</span><span></span><span></span></div></div>
+        <div class="setting_item_content">
+            <div><span id="setting_item_rotation_xtitle" class="xaxis">X轴旋转</span>
+                <span><i class="setting_item_minus" id="setting_item_rx_minus"></i><input type="number" id="setting_item_rx" min="-6.28" max="6.28" maxlength="25"><i class="setting_item_add" id="setting_item_rx_add"></i></span>
+                <span>
+                        <select id="setting_item_rx_step">
+                            <option value="0.01">0.01</option>
+                            <option value="0.1">0.1</option>
+                            <option value="1" selected="">1</option>
+                        </select>
+                    </span>
+            </div>
+            <div><span id="setting_item_rotation_ytitle" class="yaxis">Y轴旋转</span>
+                <span><i class="setting_item_minus" id="setting_item_ry_minus"></i><input type="number" id="setting_item_ry" min="-6.28" max="6.28" maxlength="25"><i class="setting_item_add" id="setting_item_ry_add"></i></span>
+                <span><select id="setting_item_ry_step">
+                            <option value="0.01">0.01</option>
+                            <option value="0.1">0.1</option>
+                            <option value="1" selected="">1</option>
+                        </select></span></div>
+            <div><span id="setting_item_rotation_ztitle" class="zaxis">Z轴旋转</span>
+                <span><i class="setting_item_minus" id="setting_item_rz_minus"></i><input type="number" id="setting_item_rz" min="-6.28" max="6.28" maxlength="25"><i class="setting_item_add" id="setting_item_rz_add"></i></span>
+                <span><select id="setting_item_rz_step">
+                            <option value="0.01">0.01</option>
+                            <option value="0.1">0.1</option>
+                            <option value="1" selected="">1</option>
+                        </select></span></div>
+        </div>
+    </div>
+    <div class="controlGUI-btns"><div class="controlGUI-btn del-controlgui-btn">删除</div><div class="controlGUI-btn save-controlgui-btn">保存</div></div>
+</div>
+<div id="panoVideoDIV" style="position: absolute;z-index: -1000;display: none"></div>
+
+<div id="firstLoading" style="display: none;">
+    <div style="height: 170px;margin-bottom: 3rem;">
+        <img id="first-loading-splash" src="" style="height: 80px; width: auto">
+    </div>
+</div>
+<div id="gui-loading" style="background-color: rgba(255, 255, 255, 0); display: none;" class="message-outer">
+    <!--<h2 class="model-title"></h2>-->
+    <div class="message-inner">
+        <img id="gui-loading-splash" src="" style="height: 80px; width: auto; display: none;">
+        <div id="circleLoader" style="opacity: 1;">
+            <div class="progress-bar g stripes">
+                <span id="loadingProgress" style="width: 100%; background-color: rgb(75, 205, 252);"></span>
+            </div>
+            <div>
+                <h2 id="progressNum" style="color: #dfe0e1;">100%</h2>
+            </div>
+        </div>
+        <div id="loaderCoBrand" style="display: none;">
+            <div class="vert-align">
+                <h2 id="loaderCoBrandName"></h2>
+            </div>
+        </div>
+        <div class="specialPower" style="display: none"><span class="powered-by">powered by</span>&nbsp;
+        </div>
+        <div class="message-technology"></div>
+        <div class="loadingLogo pc" style="display: none;">
+            <img src="" alt="">
+        </div>
+        <div id="intoModel" style="display: none"></div>
+    </div>
+</div>
+<div class="vr-guide-dialog" style="display: none;">
+    <div class="vr-close">
+        <div class="close ui-icon-3dnest">
+            <!--<a><i class="icon icon-close"></i>-->
+            <!--</a>-->
+            <span class="button_nobg vrclose"></span>
+        </div>
+        <div class="title"></div>
+    </div>
+    <img class="top-img" style="display: block" src="https://template2.3dnest.cn/common/image/vr-guide_290x300.png">
+
+    <div id="descrVr">请将手机解锁自动旋转后放入VR眼镜中</div>
+    <div id="beginVr" class="description">将视野中白色圆点瞄准蓝色方块后即可前进</div>
+    <div id="goto-vr">请使用手机进入VR模式</div>
+</div>
+<div id="tag-detail-container">
+    <div id="tag-detail" class="fullWidth darkGlass">
+        <div id="tag-detail-ins">
+            <div id="tag-img-container">
+                <img id="tag-img">
+            </div>
+        </div>
+        <div id="tag-text-container">
+            <p id="tag-title-info"></p>
+
+            <p id="tag-detail-info"></p>
+        </div>
+        <div id="tag-buy-img">
+            <div class="godetail"></div>
+            <div id="details" style="float: right;">查看详情</div>
+        </div>
+    </div>
+</div>
+
+<div id="zqlogo" class="zqlogo" style="display: none;">
+    <div class="zqlogo-img">
+        <img src="https://beyond.3dnest.cn/images/zqlogo.png" style="width: 100%;height: 100%;">
+    </div>
+</div>
+
+<div id="zqIframe" class="zq-iframe" style="display: none;">
+    <div id="closeZqIframe" class="closeZqIframe">
+        <div id="closeimg" class="close-img">×</div>
+    </div>
+    <div id="iframeBoxs" style="height: 96%;overflow: visible;-webkit-overflow-scrolling:touch;">
+        <iframe class="iframe-opens iframeWH" frameborder="no" width="100%" height="100%" allowfullscreen="true"></iframe>
+    </div>
+</div>
+
+<div id="object360Tag" class="object360Tag" style="display:none;">
+    <div class="tag360Close"></div>
+    <div class="object360TagMain">
+        <div id="tag360picLoading" style="display:none;"></div>
+        <div class="tag360header">
+            <div class="tag360pic" id="tag360pic" style="margin: 3px auto;"></div>
+        </div>
+        <div class="tag360content">
+            <div class="tag360Title" id="tag360Title"></div>
+            <div class="tag360price_saving">
+                <div id="tag360price" class="tag360price"></div>
+                <div id="tag360save" class="tag360save"></div>
+            </div>
+            <div class="tag360weight" id="tag360weight"></div>
+            <div id="tag360contentDetail"></div>
+        </div>
+        <div class="object360TagMore" id="object360TagMore"><span>More</span></div>
+    </div>
+</div>
+
+<div id="commodityTag" class="commodityTag" style="display: none;">
+    <div class="closeCommodityTag"></div>
+    <div id="commodityTagMain">
+        <div id="commodityTagContent">
+            <div class="commodity_video_images">
+                <!-- 音频内容 -->
+                <div class="commodity_audio_list" id="commodity_audio_list" style="display: none">
+                    <audio id="commodity_audio" loop="loop">
+                        <source src="" id="commodity_audio_source" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
+                <!-- 视频播放内容 -->
+                <div class="commodity_video_list" id="commodity_video_list" style="display: none">
+                    <video id="commodity_video" height="100%" width="100%" style="background: #000000" x5-video-player-fullscreen="true">
+                        <source id="commodity_video_source" src="" type="video/mp4">
+                        your browser does not support the video tag
+                    </video>
+                    <!-- <video id="commodity_video" height="100%" width="99%" style="object-fit:fill"
+                        webkit-playsinline="true" playsinline="true"
+                        x5-video-player-type="h5" x5-video-orientation="h5" x5-video-player-fullscreen="true">
+                        <source id="commodity_video_source" src='' type="video/mp4">
+                        your browser does not support the video tag
+                    </video> -->
+                    <div class="commodity_video_cover" id="commodity_video_cover">
+                        <!-- <img id="commodity_video_img" src='' /> -->
+                        <span id="commodity_video_play"></span>
+                    </div>
+                </div>
+                <!-- 图片展示内容 -->
+                <div class="commodity_images_list swiper-container" id="commodity_images_list">
+                    <div class="image_center swiper-wrapper" id="image_center"></div>
+                    <div class="image_left swiper-button-prev" style="display: none;"></div>
+                    <div class="image_right swiper-button-next" style="display: none;"></div>
+                </div>
+                <!-- 360图片展示内容 -->
+                <div class="commodity_three_list" id="commodity_three_list" style="display: none">
+                    <div id="commodity_three_images"></div>
+                </div>
+            </div>
+            <!-- 按钮控制内容 -->
+            <div class="btns_list" id="btns_list_id">
+                <span class="commodity_audio_play_btn" id="commodity_audio_btn"></span>
+                <span class="commodity_btn" id="commodity_video_btn_id"></span>
+                <span class="commodity_btn commodity_btn_active" id="commodity_img_btn_id"></span>
+                <span class="commodity_btn" id="commodity_three_btn_id"></span>
+            </div>
+            <!-- 商品标题，商品折扣 -->
+            <div class="commodity_title">
+                <div class="commodity_title_info"><span id="commodity_title"></span></div>
+                <!--二期需求暂时隐藏-->
+                <div class="commodity_title_tips" id="commodity_title_tips" style="display: none"></div>
+            </div>
+            <!-- 商品类型，颜色等信息 -->
+            <div class="commodity_info">
+                <div class="commodity_typename"><span id="commodity_typename"></span></div>
+                <div id="commodity_color"></div>
+            </div>
+            <!-- 商品尺寸信息 -->
+            <div class="commodity_volume">
+                <div class="commodity_size"><span id="commodity_size"></span></div>
+            </div>
+            <!-- 商品价格信息 -->
+            <div class="commodity_price">
+                <div><span id="commodity_presentrice"></span><span id="commodity_oprice"></span></div>
+                <div><span id="commodity_url"></span></div>
+            </div>
+        </div>
+        <!-- 窗口关闭 -->
+        <div id="commodityTagClose">
+            <div id="close_btn"><span></span></div>
+        </div>
+    </div>
+</div>
+
+<!-- 二级菜单 -->
+<div class="wheel-container" style="display: none">
+    <div class="wheelSize">
+        <div class="wheelPic"></div>
+    </div>
+</div>
+<div class="three-container" style="display: none">
+    <div class="threeSize">
+        <div class="fake_3d">
+        </div>
+    </div>
+</div>
+
+<!-- <div ></div> -->
+
+<!-- 新功能增加 商品列表-->
+<div id="drawer-container-2nd" style="display: none;">
+
+    <!-- gui.js/Mattertag.js 控制显隐 -->
+    <!-- 新增的商品列表 -->
+    <!-- open-2nd -->
+    <div id="drawer-2nd" class="fullWidth-2nd">
+        <!-- frameBG  背景色 -->
+
+        <div class="frame-container-2nd frameBG">
+            <div class="commodity_search" style="display: none;">
+                <input type="search" id="commodity_search" style="display: none;" placeholder="商品检索...." value="">
+                <button type="button" class="search_button">搜索</button>
+            </div>
+            <div class="changePage" style="display: none;">
+                <div class="prevPage"></div>
+                <div class="nextPage"></div>
+            </div>
+            <!-- frame-2nd -->
+            <div id="shopSwiper" class="olDiv swiper-container swiper-container-horizontal swiper-container-free-mode">
+                <p class="search_title search_open"></p>
+                <ol id="thumb-list" class="swiper-wrapper tabC headMenu" style="transform: translate3d(0px, 0px, 0px);">
+                </ol>
+            </div>
+            <div id="scrollFrame-2nd" class="frame-2nd" style="overflow: hidden;">
+                <ul id="thumb-container-2nd" class="slidee slidee-2nd" style="transform: translateZ(0px); width: 0px;">
+                </ul>
+            </div>
+            <div class="scrollbar hidden" id="scroller-2nd" style="">
+                <div class="handle" style="transform: translateZ(0px);"></div>
+            </div>
+        </div>
+    </div>
+    <div id="playHead" style="display:none;">
+        <div id="status-2nd"><span class="curIdx">1</span>/<span class="totalSteps"></span></div>
+        <div id="progressBar-2nd"></div>
+    </div>
+</div>
+<!-- 新增商品列表end -->
+
+
+
+<div class="pctagcontainer" style="display:none;">
+    <div class="whiteboard">
+        <!--<div  class="prism-player" id="video-tag"></div>-->
+        <!--<video controls id="video-tag" style="display: none;"></video>-->
+        <video controls="" id="video-tag" webkit-playsinline="true" playsinline="true" raw-controls="true" x-webkit-airplay="true" x5-video-player-type="h5" x5-video-orientation="portraint" poster="" style="max-width:-webkit-fill-available;max-height:-webkit-fill-available;object-fit:contain;margin: 0 auto;"></video>
+        <!--<video controls preload="auto" id="video-tag" style="display: none;"></video>-->
+        <div class="topimg">
+            <img class="imageCon" src="" alt="">
+        </div>
+        <!-- <div class="swiper-container slider_con" id="slidePictures" style="display: none;">
+            <div class="slider swiper-wrapper wrapperPic" id="wrapperPic"></div>
+            <div id="btn-prev3" class="swiper-button-prev btn-prev3 swiper-button-white" style="display: none"></div>
+            <div id="btn-next3" class="swiper-button-next btn-next3 swiper-button-white" style="display: none"></div>
+            <div class="swiper-pagination" id="pagination3"></div>
+        </div> -->
+        <div id="slidePictures" class="swipslider">
+            <ul id="sw-slides" class="sw-slides" data-tag="false" data-getdown="false">
+                <!-- <li class="sw-slide">
+                    <img src="https://infocdn2.3dnest.cn/zq_jdcskd_263/2018-10-19-05-56-07/nesttags/454c4c2e-2d39-11eb-bc43-00163e32905a_672x892.png" alt="Summer beach concept">
+                </li>-->
+            </ul>
+            <span class="sw-next-prev sw-next"></span>
+            <span class="sw-next-prev sw-prev"></span>
+        </div>
+        <div class="middletext">
+            <b>
+                <div class="middletitle"></div>
+            </b>
+            <div class="middlecontent"></div>
+        </div>
+        <div class="bottomlink">
+            <div class="godetail"></div>
+            <div class="bl-text">查看详情</div>
+        </div>
+    </div>
+    <div class="closeTagContainer"></div>
+</div>
+<!--<div id="full-right-container">-->
+<!--<div id="full-right-detail" class="fullWidth darkGlass">-->
+<!--<div id="full-right-img-container">-->
+<!--<img id="full-right-img">-->
+<!--</div>-->
+<!--<div id="full-right-text-container">-->
+<!--<p id="tag-right-title-info"></p>-->
+<!--<p id="tag-right-detail-info"></p>-->
+<!--</div>-->
+<!--<div id="full-right-buy-container">-->
+<!--<div id="full-right-buy-img" style="cursor: pointer">了解详情</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<div id="containerScroll" class="originpic-container" android:clickable="true" style="display:none;">
+    <div id="picsizeScroll" class="picsize">
+        <div id="originpicScroll" class="originpic" style="cursor: move;"></div>
+    </div>
+</div>
+<div id="vr-mode-container" style="display: none">
+    <!--<div id="gui-vr-off"><a><i rel="tooltip" title="全景模式"-->
+    <!--class="icon icon-vr-off"></i></a></div>-->
+    <div id="gui-vr-off" class="vr-off"></div>
+</div>
+<div class="toast-wrap">
+    <span class="toast-msg"></span>
+</div>
+<div id="gui-thumb" style="background-image: url(&quot;https://infocdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/resources/20220225131356_bg_img_pc.jpg&quot;); transform: scale(1.1); display: none;"></div>
+
+<div id="image-floor-container" style="display: none;">
+    <img id="floor-image" src="">
+</div>
+<div id="log"></div>
+<div id="player" style="" tabindex="-1"><canvas width="1677" height="1444" style="width: 1118px; height: 963px;"></canvas></div>
+<div id="gui-parent">
+    <div id="barrageCon"></div>
+    <div>
+        <div id="virgule" style="display: none"></div>
+        <div id="barrageShow" style="display: none">
+            <div class="barrageSwitch" style="display: none">
+                <p>开关</p>
+                <div class="barrage-switch"></div>
+            </div>
+            <div class="barrageControl">
+                <div class="barrage-con"></div>
+            </div>
+            <div class="sendBarrage" style="display: none">
+                <p>发弹幕</p>
+                <div class="barrage-send"></div>
+            </div>
+            <div class="comment" style="display: none">
+                <p class="commentDanmu">发弹幕</p>
+                <input class="commentDet" type="text" placeholder="   不要超过30个字哦!">
+                <button class="commentBtn" type="button">发送</button>
+                <button class="commentClose" type="button">关闭</button>
+            </div>
+        </div>
+    </div>
+    <div id="gui" style="display: block;">
+        <audio id="audio-bar" autoplay="" loop="" src="https://infocdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/resources/20220226063008_bg_music.mp3"></audio>
+        <audio id="audio-tag" autoplay="autoplay"></audio>
+        <audio id="audio-summary" autoplay="autoplay"></audio>
+
+        <!--<div class="pwVideo">-->
+        <!--<div class="video-zz">-->
+        <!--<video controls id="iframe-video">-->
+        <!--&lt;!&ndash;<source class="video-source" src="http://beyond.3dnest.cn/panorama/ascott/video/1234.mp4" type="video/mp4">&ndash;&gt;-->
+        <!--</video>-->
+        <!--</div>-->
+        <!--<div class="video-text">-->
+        <!--<h3 class="video-caption"></h3>-->
+        <!--<p class="video-desc"></p>-->
+        <!--</div>-->
+        <!--&lt;!&ndash;<img class="video-play" src="images/icon_video_play.png" alt="">&ndash;&gt;-->
+        <!--</div>-->
+
+        <div id="pinTopLeft" class="pinTop left" style="display: none">
+            <div id="model-title">
+                <div class="title-row">
+                    <div id="title-toggle" class="hasHover"><a class="hasHover"><i class="icon icon-dpad-left"></i></a></div>
+                    <div class="title-container meta-toggle hasHover">
+                        <a id="more-hint" class="hasHover">打开 <i class="icon icon-dpad-down"></i></a>
+                        <a id="less-hint" style="display:none" class="hasHover">关闭 <i class="icon icon-dpad-up"></i></a>
+                        <!--<a id="phone-topbar" style="display: none;" href="tel:10086"> <i class="icon icon-phone"></i></a>-->
+                        <div id="gui-name" class="gui-text titleText noCoBrand" rel="tooltip" data-placement="bottom" data-html="true" data-original-title="" title="">渡江战役胜利暨南京解放云展览</div>
+                    </div>
+                </div>
+            </div>
+            <div class="meta-info-spacing-fix">
+                <!--<div id="meta-info">-->
+                <!--<div id="meta-description"></div>-->
+                <!--<div id="presented-by"></div>-->
+                <!--<div class="contact-info">-->
+                <!--<div id="contact-data" style="display: none"></div>-->
+                <!--</div>-->
+                <!--<div class="support">-->
+                <!--<span id="supportTxt" style="float: left; display: none"></span>-->
+                <!--<img class="qrimg" style="display: block" src="">-->
+                <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <div class="pinBottom-container">
+            <div class="pinBottom center highlightExists open">
+                <!--<div id="view-controllers">-->
+                <!--<div id="gui-modes-dollhouse" class="darkGlass"><span class="mode">3D</span></div>-->
+                <!--<div id="gui-modes-floorplan" class="darkGlass"><span class="mode">平面</span></div>-->
+                <!--</div>-->
+                <div id="view-controllers" style="display: none;">
+                    <div class="switch">
+                        <input type="radio" class="switch-input" name="view" value="week" id="week" checked="">
+                        <label id="gui-modes-dollhouse" for="week" class="switch-label switch-label-off">3D</label>
+                        <input type="radio" class="switch-input" name="view" value="month" id="month">
+                        <label id="gui-modes-floorplan" for="month" class="switch-label switch-label-on">平面</label>
+                        <span class="switch-selection"></span>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="pinBottom vr">-->
+            <!--<div id="gui-vr-on" class="ui-icon-3dnest" style="display: none;"><a><i rel="tooltip" title="VR模式"-->
+            <!--class="icon icon-vr-on"></i></a></div>-->
+            <!--</div>-->
+        </div>
+        <div class="pinBottom highlightExists open" id="pinBtmLoad" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+            <!--<div class="viewContainer">-->
+            <div id="moreHouse" class="button_left moreHouse pc" style="left: -8px;display: none"></div>
+            <div id="pullTab" class="button_left pc down opened" style="display: block;"></div>
+            <div class="buttonsbar" style="margin-left: 0px">
+                <div id="play" class="button_left play pc" style="display: block; margin: 0px;"></div>
+                <div id="multiplier-speed" class="button_left multiplierSpeed" style="display: none;">
+                    <span></span>
+                    <p class="playSpeed">倍速</p>
+                    <ul style="display: none; opacity: 0;">
+                        <li class="mulSpeed">0.3×<span></span></li>
+                        <li class="mulSpeed">0.5×<span></span></li>
+                        <li class="mulSpeed">1.0×<span></span></li>
+                        <li class="mulSpeed">1.5×<span></span></li>
+                        <li class="mulSpeed">2.0×</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--shopList 新增商城功能按钮-->
+            <div id="shopTab" class="button_left pull-n" style="display: none;"></div>
+            <!--新增商城功能end -->
+
+            <div class="buttonsbar">
+                <div class="titlecontent" style="float:left">渡江战役胜利暨南京解放云展览</div>
+                <div id="openmenu" class="button_left" style="margin-right: -22px;">
+                    <div class="openmenu"></div>
+                </div>
+                <div id="m-openmenu" class="button_left m-openmenu" style="display: none"></div>
+                <!--<div id="gui-modes-inside" class="button_left inside"></div>-->
+                <div id="gui-modes-outside" class="button_left pc outside">
+                    <div id="cube-container" style="display: block;">
+                        <div class="cube">
+                            <back></back>
+                            <bottom></bottom>
+                            <front></front>
+                            <left></left>
+                            <right></right>
+                            <top></top>
+                        </div>
+                        <div class="cube-center">
+                            <back-center></back-center>
+                            <bottom-center></bottom-center>
+                            <front-center></front-center>
+                            <left-center></left-center>
+                            <right-center></right-center>
+                            <top-center></top-center>
+                        </div>
+                    </div>
+                </div>
+                <div id="gui-vr-on" class="button_left pc openvr" style="display: block;">
+                    <div class="vrbargroup">
+                        <div class="vritem openor"></div>
+                        <div class="vritem openvr"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="m-opencatalog" class="button_left" style="display: none"></div>
+        </div>
+
+        <div class="pinBottom bottom_presented_container highlightExists open" style="display: none">
+            <span id="bottom_presented_by" style="display: none;"></span>
+        </div>
+        <div class="pinBottom right hideTarget highlightExists open" style="display: block; right: 50px;">
+            <div class="rightViewContainer">
+                <div class="gui-floor pc hasHover" style="">
+                    <div class="gui-floor-title">一楼</div>
+                    <span class="gui-floor-number">2 层</span>
+                    <!--<i class="icon icon-dpad-up"></i>-->
+                    <div class="floorup pc"></div>
+                    <div class="container"><div class="floorChoice darkGlass allFloorBtn" data-index="all" style="display: none;">整体</div><div class="floorChoice lastFloorBtn active" data-index="1" id="lastFloorBtn">一楼</div><div class="floorChoice firstFloorBtn" data-index="0">地下一楼</div></div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="pinBottom zoomPanel">-->
+        <!--<div id="gui-zoomin" class="buttonZoom buttonZoomIn buttonZoomEnabled" data-placement="top" style="display: none">-->
+        <!--<div class="buttonZoomContent"><a><i rel="tooltip" title="Zoom in" class="icon icon-plus"></i></a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--<div id="gui-zoomout" class="buttonZoom buttonZoomOut buttonZoomEnabled" data-placement="top" style="display: none">-->
+        <!--<div class="buttonZoomContent"><a><i rel="tooltip" title="Zoom out" class="icon icon-minus"></i></a>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+    <div id="drawer-container">
+        <div id="drawer" class="fullWidth open">
+            <div class="frame-container frameBG" style="width: 80%;">
+                <div id="scrollFrame" class="frame" style="overflow: hidden;">
+                    <ul id="thumb-container" class="slidee" style="transform: translateZ(0px); width: 3852px;"><li class="thumbImg hasHover" data-index="0"><div class="overlay">序厅</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_01_4.jpg"></li><li class="thumbImg hasHover" data-index="1"><div class="overlay">题词</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_02_4.jpg"></li><li class="thumbImg hasHover" data-index="2"><div class="overlay">浮雕</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_07_4.jpg"></li><li class="thumbImg hasHover" data-index="3"><div class="overlay">展厅入口</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_14_4.jpg"></li><li class="thumbImg hasHover" data-index="4"><div class="overlay">前言</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_19_4.jpg"></li><li class="thumbImg hasHover" data-index="5"><div class="overlay">第一部分</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_24_4.jpg"></li><li class="thumbImg hasHover" data-index="6"><div class="overlay">挺进中原</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_26_4.jpg"></li><li class="thumbImg hasHover" data-index="7"><div class="overlay">总前委雕像</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_31_4.jpg"></li><li class="thumbImg hasHover" data-index="8"><div class="overlay">第一部分展柜</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_34_4.jpg"></li><li class="thumbImg hasHover" data-index="9"><div class="overlay">第一部分结语</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_38_4.jpg"></li><li class="thumbImg hasHover" data-index="10"><div class="overlay">第二部分</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_40_4.jpg"></li><li class="thumbImg hasHover" data-index="11"><div class="overlay">济南第一团</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_42_4.jpg"></li><li class="thumbImg hasHover" data-index="12"><div class="overlay">人民支前</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_58_1.jpg"></li><li class="thumbImg hasHover" data-index="13"><div class="overlay">江南策应</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_61_4.jpg"></li><li class="thumbImg hasHover" data-index="14"><div class="overlay">胜利门</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_69_1.jpg"></li><li class="thumbImg hasHover" data-index="15"><div class="overlay">沉浸场景</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_80_4.jpg"></li><li class="thumbImg hasHover" data-index="16"><div class="overlay">二层步梯入口</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_93_4.jpg"></li><li class="thumbImg hasHover" data-index="17"><div class="overlay">一层入口</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_107_4.jpg"></li><li class="thumbImg hasHover" data-index="18"><div class="overlay">场景重现</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_114_4.jpg"></li><li class="thumbImg hasHover" data-index="19"><div class="overlay">油画</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_122_4.jpg"></li><li class="thumbImg hasHover" data-index="20"><div class="overlay">第二部分结尾</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_126_4.jpg"></li><li class="thumbImg hasHover" data-index="21"><div class="overlay">第三部分</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_131_4.jpg"></li><li class="thumbImg hasHover" data-index="22"><div class="overlay">第三部分中</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_136_4.jpg"></li><li class="thumbImg hasHover" data-index="23"><div class="overlay">全面接管</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_151_4.jpg"></li><li class="thumbImg hasHover" data-index="24"><div class="overlay">枪炮实物</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_140_4.jpg"></li><li class="thumbImg hasHover" data-index="25"><div class="overlay">古城换了人间</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_165_4.jpg"></li><li class="thumbImg hasHover" data-index="26"><div class="overlay">巨幅油画</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_152_4.jpg"></li><li class="thumbImg hasHover" data-index="27"><div class="overlay">第四部分</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_156_4.jpg"></li><li class="thumbImg hasHover" data-index="28"><div class="overlay">第四部分中</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_172_4.jpg"></li><li class="thumbImg hasHover" data-index="29"><div class="overlay">解放上海</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_175_4.jpg"></li><li class="thumbImg hasHover" data-index="30"><div class="overlay">第四部分结语</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_179_4.jpg"></li><li class="thumbImg hasHover" data-index="31"><div class="overlay">第五部分</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_184_4.jpg"></li><li class="thumbImg hasHover" data-index="32"><div class="overlay">第五部分结语</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_188_4.jpg"></li><li class="thumbImg hasHover" data-index="33"><div class="overlay">结束语</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_196_4.jpg"></li><li class="thumbImg hasHover" data-index="34"><div class="overlay">灯光阶梯</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_201_4.jpg"></li><li class="thumbImg hasHover" data-index="35"><div class="overlay">展览出口</div><img src="https://modelcdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/locations/pc/low/location_218_4.jpg"></li></ul>
+                </div>
+                <div class="scrollbar" id="scroller" style="">
+                    <div class="handle" style="transform: translateZ(0px) translateX(0px); width: 203px;"></div>
+                </div>
+            </div>
+        </div>
+        <div id="playHead" style="display:none;">
+            <div id="status"><span class="curIdx">1</span>/<span class="totalSteps">36</span></div>
+            <div id="progressBar"><div class="step" data-idx="0" style="width:2.7777777777777777%"></div><div class="step" data-idx="1" style="width:2.7777777777777777%"></div><div class="step" data-idx="2" style="width:2.7777777777777777%"></div><div class="step" data-idx="3" style="width:2.7777777777777777%"></div><div class="step" data-idx="4" style="width:2.7777777777777777%"></div><div class="step" data-idx="5" style="width:2.7777777777777777%"></div><div class="step" data-idx="6" style="width:2.7777777777777777%"></div><div class="step" data-idx="7" style="width:2.7777777777777777%"></div><div class="step" data-idx="8" style="width:2.7777777777777777%"></div><div class="step" data-idx="9" style="width:2.7777777777777777%"></div><div class="step" data-idx="10" style="width:2.7777777777777777%"></div><div class="step" data-idx="11" style="width:2.7777777777777777%"></div><div class="step" data-idx="12" style="width:2.7777777777777777%"></div><div class="step" data-idx="13" style="width:2.7777777777777777%"></div><div class="step" data-idx="14" style="width:2.7777777777777777%"></div><div class="step" data-idx="15" style="width:2.7777777777777777%"></div><div class="step" data-idx="16" style="width:2.7777777777777777%"></div><div class="step" data-idx="17" style="width:2.7777777777777777%"></div><div class="step" data-idx="18" style="width:2.7777777777777777%"></div><div class="step" data-idx="19" style="width:2.7777777777777777%"></div><div class="step" data-idx="20" style="width:2.7777777777777777%"></div><div class="step" data-idx="21" style="width:2.7777777777777777%"></div><div class="step" data-idx="22" style="width:2.7777777777777777%"></div><div class="step" data-idx="23" style="width:2.7777777777777777%"></div><div class="step" data-idx="24" style="width:2.7777777777777777%"></div><div class="step" data-idx="25" style="width:2.7777777777777777%"></div><div class="step" data-idx="26" style="width:2.7777777777777777%"></div><div class="step" data-idx="27" style="width:2.7777777777777777%"></div><div class="step" data-idx="28" style="width:2.7777777777777777%"></div><div class="step" data-idx="29" style="width:2.7777777777777777%"></div><div class="step" data-idx="30" style="width:2.7777777777777777%"></div><div class="step" data-idx="31" style="width:2.7777777777777777%"></div><div class="step" data-idx="32" style="width:2.7777777777777777%"></div><div class="step" data-idx="33" style="width:2.7777777777777777%"></div><div class="step" data-idx="34" style="width:2.7777777777777777%"></div><div class="step" data-idx="35" style="width:2.7777777777777777%"></div></div>
+        </div>
+    </div>
+
+    <div id="back-url" style="display: none;">
+        <a href="javascript:void(0);" class="backimg hasHover"></a>
+    </div>
+    <div id="userlogo" style="display: none;" class="pc">
+        <div class="logoimg"></div>
+    </div>
+    <div id="page-view" style="display: none;" class="pc">
+        <span id="popularity">人气：</span>
+        <span class="page-view"></span>
+    </div>
+    <div id="rightbar" class="rightbar" style="top: auto; bottom: 45px; display: block;">
+        <div class="rightgroup" style="display: block;">
+            <div id="footer-help" class="item help pc"></div>
+            <div id="audio-btn-on" class="item pc audiooff" style="display: block;"></div>
+            <div id="outermap-on" class="item outermap-on pc" style="display: none"></div>
+            <div id="phone-topbar-li" class="item" style="display: none"><a id="phone-topbar" class="phone hasHover"></a>
+            </div>
+            <div id="barrage-switch" class="item barrage-on pc" style="display: none;"></div>
+            <div id="gui-fullscreen" class="item enterfs"></div>
+            <div id="facebook" class="item fbshare" style="display: none"></div>
+            <!--电力sg-->
+            <div id="powerSg" style="display: none">
+                <a href="power.html#indexBack?callback=back" class="hasHover">返 回</a></div>
+        </div>
+    </div>
+    <div class="ck-slide" style="display: none">
+        <h3 class="ck-title">查看更多</h3>
+        <a href="javascript:;" class="ctrl-slide ck-prev hasHover"></a>
+        <ul class="ck-slide-wrapper"></ul>
+        <a href="javascript:;" class="ctrl-slide ck-next hasHover"></a>
+        <div class="ck-slidebox">
+            <div class="slideWrap">
+                <ul class="dot-wrap"></ul>
+            </div>
+        </div>
+        <div class="moreclose"></div>
+    </div>
+    <div class="pck-slide" style="display: none">
+        <div class="cs-slide-pc">
+            <div class="ctrl-slide ck-prev pc"></div>
+            <div class="ck-pc-wrapper">
+                <h3 class="ck-title">查看更多</h3>
+                <ul class="ck-slide-wrapper"></ul>
+            </div>
+            <div class="ctrl-slide ck-next pc"></div>
+        </div>
+        <div class="moreclose"></div>
+    </div>
+    <div id="morebg" style="display: none"></div>
+
+    <div id="toprightbar" class="toprightbar" style="display: none">
+        <div id="measure-group" class="toprightgroup measure-mobile" style="display: block">
+            <div id="measure-tools" class="item measure-open measure-unchecked"></div>
+
+            <div id="length-tool" class="item measure-line measure-unchecked" style="display: none"></div>
+            <div id="area-tool" class="item measure-area measure-unchecked" style="display: none"></div>
+            <div id="reset-tool" class="item measure-clear measure-unchecked" style="display: none"></div>
+            <div id="help-tool" class="item measure-help measure-unchecked" style="display: none"></div>
+
+            <div id="help-tool-m" class="item measure-help measure-unchecked" style="display: none"></div>
+            <div id="reset-tool-m" class="item measure-clear measure-unchecked" style="display: none"></div>
+            <div id="area-tool-m" class="item measure-area measure-unchecked" style="display: none"></div>
+            <div id="length-tool-m" class="item measure-line measure-unchecked" style="display: none"></div>
+
+
+        </div>
+        <div id="measure-unit" style="display: none">
+            <p></p>
+            <div class="switch-unit">
+                <input type="radio" class="switch-input" name="unit" value="m" checked="">
+                <label id="unit-m">m</label>
+                <input type="radio" class="switch-input" name="unit" value="ft">
+                <label id="unit-ft">ft</label>
+                <span class="unit-selection"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="add_tag" style="z-index: 999;display: none;">
+    <form id="formd" enctype="multipart/form-data">
+        <div>
+            *项目ID: <input id="inp_nest_id" name="nest_id" type="text" value="" readonly="">
+        </div>
+        <div style="display: none;">楼层：<input id="inp_nest_floor" name="nest_floor" type="text" value="" readonly="">
+        </div>
+        <div style="display: none">
+            <input id="inp_base_x" name="base_x" value="1"><input id="inp_base_y" name="base_y" value="2">
+            <input id="inp_base_z" name="base_z">
+            <input id="inp_normal_x" name="normal_x">
+            <input id="inp_normal_y" name="normal_y" value=""><input id="inp_normal_z" name="normal_z">
+            <input id="inp_dx" name="stem_x">
+            <input id="inp_dy" name="stem_y" value=""><input id="inp_dz" name="stem_z">
+            <input id="inp_tag_qw" name="qw" type="hidden" class="form-control">
+            <input id="inp_tag_qx" name="qx" type="hidden" class="form-control">
+            <input id="inp_tag_qy" name="qy" type="hidden" class="form-control">
+            <input id="inp_tag_qz" name="qz" type="hidden" class="form-control">
+
+            <input id="inp_location_id" name="location_id">
+        </div>
+        <div id="action_ip">
+            *标签类型:
+            <label for="option1" class="check_tag"><input id="option1" type="radio" name="type" value="1" checked="">全景</label>
+            <label for="option2" class="check_tag"><input id="option2" type="radio" name="type" value="2">平面</label>
+            <span id="tip" style="color: red;display: none;">(标题在<em>四个</em>汉字以内)</span>
+        </div>
+        <div id="cle_val">
+            *标签展示类型:
+            <label for="viewtype1"><input id="viewtype1" type="radio" name="template_type" value="1" checked="">文本</label>
+            <label for="viewtype2"><input id="viewtype2" type="radio" name="template_type" value="2">图文</label>
+            <label for="viewtype4"><input id="viewtype4" type="radio" name="template_type" value="4">音频</label>
+            <label for="viewtype5"><input id="viewtype5" type="radio" name="template_type" value="5">跳转</label>
+            <label class="display-none" id="tag_360_type" for="viewtype10"><input id="viewtype10" type="radio" name="template_type" value="10">跳转到室外全景</label>
+            <label for="viewtype8"><input id="viewtype8" type="radio" name="template_type" value="8">万能外链(可在界面展示视频、3D模型等)</label>
+            <label id="ew_lable" style="display: none;" for="viewtype101"><input id="viewtype101" type="radio" name="template_type" value="101">EW图文</label>
+            <label id="ikea_lable" style="display: none;" for="viewtype102"><input id="viewtype102" type="radio" name="template_type" value="102">宜家商品</label>
+        </div>
+        <div id="tag_bg_style">
+            <label>选择标签样式</label>
+            <div class="display-flex">
+                <div style="margin-right: 2px;">
+                    <input type="radio" name="tagnum" value="1" checked="" class="make-switch switch-radio1"><label>默认样式</label>
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="2" class="make-switch switch-radio1"><label>样式1</label>
+                    <img class="img-responsive-half switch-label1" src="https://template2.3dnest.cn/common/image/tagtype1_1_60x60.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="3" class="make-switch switch-radio1"><label>样式2</label>
+                    <img class="img-responsive-half switch-label2" src="https://template2.3dnest.cn/common/image/tagtype1_2_60x60.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="4" class="make-switch switch-radio1"><label>样式3</label>
+                    <img class="img-responsive-half switch-label3" src="https://template2.3dnest.cn/common/image/tagtype1_3_60x60.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="5" class="make-switch switch-radio1"><label>样式4</label>
+                    <img class="img-responsive-half switch-label4" src="https://template2.3dnest.cn/common/image/tagtype1_4_60x60.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="6" class="make-switch switch-radio1"><label>样式5(文本)</label><br>
+                    <input class="display-none" type="text" id="tagtitle" name="tagtitle" placeholder="输入文字或文本,不超过五个字">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="7" class="make-switch switch-radio1"><label>样式6(自定义标签图片)</label><br>
+                    <input class="display-none" type="file" id="tagpic" name="tagpic">
+                </div>
+            </div>
+            <div id="gif_tag_style" class="form-group display-flex">
+                <div style="margin-right: 2px;">
+                    <input type="radio" name="tagnum" value="8" class="make-switch switch-radio1"><label>样式7</label>
+                    <img class="img-responsive-half switch-label5" src="https://template2.3dnest.cn/common/image/gif8_80x80.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="9" class="make-switch switch-radio1"><label>样式8</label>
+                    <img class="img-responsive-half switch-label6" src="https://template2.3dnest.cn/common/image/gif9_80x80.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="10" class="make-switch switch-radio1"><label>样式9</label>
+                    <img class="img-responsive-half switch-label7" src="https://template2.3dnest.cn/common/image/gif10_80x80.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="11" class="make-switch switch-radio1"><label>样式10</label>
+                    <img class="img-responsive-half switch-label8" src="https://template2.3dnest.cn/common/image/gif11_80x80.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="12" class="make-switch switch-radio1"><label>样式11</label>
+                    <img class="img-responsive-half switch-label9" src="https://template2.3dnest.cn/common/image/gif12_80x80.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="13" class="make-switch switch-radio1"><label>样式12</label><br>
+                    <img class="img-responsive-half switch-label10" src="https://template2.3dnest.cn/common/image/gif13_80x80.png" alt="">
+                </div>
+                <div>
+                    <input type="radio" name="tagnum" value="14" class="make-switch switch-radio1"><label>样式13</label><br>
+                    <img class="img-responsive-half switch-label11" src="https://template2.3dnest.cn/common/image/gif14_80x80.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div id="sub_value">
+            标签名称: <input id="inp_title" name="title" type="text" maxlength="40" placeholder="输入标签名称,长度不超过40位">
+        </div>
+        <div id="custom_id" style="display: none;">
+            *客户系统id: <input id="inp_custom_id" name="custom_id" type="text" maxlength="64" placeholder="请输入客户系统对接id">
+        </div>
+        <div id="tag_to_360" class="form-group display-none">
+        </div>
+        <div id="tag_url" class="display-none">
+            链接url: <input id="inp_url" name="url" type="text" placeholder="https://">&nbsp;
+        </div>
+        <div id="tag_image" class="display-none">
+            上传图片(900x700): <input id="upimg" name="upimg" type="file"><input id="upimg2" name="upimg2" type="file">
+            <input id="upimg3" name="upimg3" type="file" style="margin-left: 9.2em;">
+        </div>
+
+        <div id="tag_music" class="display-none">
+            上传音频(小于1M): <input id="upmic" name="upmic" type="file">
+        </div>
+        <div id="tag_detail">
+            <label for="tex_des">标签内容: </label><textarea name="description" id="tex_des" cols="60" rows="5" style="background-color: #eee;padding: 10px"></textarea>
+        </div>
+        <div id="product_info" style="display: none;">
+            <label>商品信息:</label>
+            <div class="col-md-9" style="margin: 0;">
+                <div class="form-group" style="margin-top: 0;">
+                    <div style="display: inline-block">
+                        <label for="subject" class="col-md-5 control-label">商品名称</label>
+                        <input type="text" id="subject" name="subject" class="form-control">
+                    </div>
+                    <div style="display: inline-block">
+                        <label class="col-md-5 control-label">是否新品</label>
+                        <div class="col-md-7" style="margin-top: 5px; display: inline-block">
+                            <label for="isNew_true">是</label>
+                            <input type="radio" id="isNew_true" value="1" name="isNew">
+                            <label for="isNew_false">否</label>
+                            <input type="radio" id="isNew_false" value="0" name="isNew">
+                        </div>
+                    </div>
+                    <div style="display: inline-block">
+                        <label for="price" class="col-md-5 control-label">价格</label>
+                        <input type="text" id="price" name="price" class="form-control">
+                    </div>
+                    <div style="display: inline-block">
+                        <label for="num" class="col-md-5 control-label">数量</label>
+                        <input type="text" id="num" name="num" class="form-control">
+                    </div>
+                    <div style="display: inline-block">
+                        <label for="productid" class="col-md-5 control-label">货号</label>
+                        <input type="text" id="productid" name="productid" class="form-control">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--<div id="sm_product">-->
+        <!--单多品信息&nbsp;&nbsp;类型: <label for="option5"><input id="option5" type="radio" name="sub_type1" value="1"-->
+        <!--checked/>普通</label>-->
+        <!--<label for="option6"><input id="option6" type="radio" name="sub_type1" value="2"/>AR</label>-->
+        <!--<label for="option7"><input id="option7" type="radio" name="sub_type1" value="3"/>3D</label>&nbsp;-->
+        <!--ID: <input type="text" id="inp_id_1" name="obj_id1"/><button type="button" id="btn_add" value="增加">增加</button>-->
+        <!--</div>-->
+        <div style="text-align: center;">
+            <input type="button" id="submit_form" value="提交">&nbsp;&nbsp;<input type="button" id="cancel_add_tag" value="取消">
+        </div>
+    </form>
+</div>
+<div id="adjust_angle" style="z-index: 999;display: none;">
+    <div>
+        <div class="input_nest_title"> 参数1：</div>
+        <button id="input_nest_up_x" style="width: 60px;">+</button>
+        <button id="input_nest_down_x" style="width: 60px;">-</button>
+        <button id="reset_nest_x" style="width: 30px;">重置</button>
+        <span id="x_adjust_value" style="margin-left: 2px;">0</span>
+    </div>
+    <div>
+        <div class="input_nest_title"> 参数2：</div>
+        <button id="input_nest_up_y" style="width: 60px;">+</button>
+        <button id="input_nest_down_y" style="width: 60px;">-</button>
+        <button id="reset_nest_y" style="width: 30px;">重置</button>
+        <span id="y_adjust_value" style="margin-left: 2px;">0</span>
+    </div>
+    <div>
+        <div class="input_nest_title"> 参数3：</div>
+        <button id="input_nest_up_z" style="width: 60px;">+</button>
+        <button id="input_nest_down_z" style="width: 60px;">-</button>
+        <button id="reset_nest_z" style="width: 30px;">重置</button>
+        <span id="z_adjust_value" style="margin-left: 2px;">0</span>
+    </div>
+    <div style="text-align: center;margin-top: 20px;">
+        <input type="button" id="submit_form_aa" value="提交">
+    </div>
+</div>
+
+<div id="adjust_compass" style="z-index: 999;display: none;">
+    <div>
+        <div class="input_nest_title"> 旋转：</div>
+        <button id="input_nest_rotate_up" style="width: 60px;">+</button>
+        <button id="input_nest_rotate_down" style="width: 60px;">-</button>
+        <button id="input_nest_rotate_zero" style="width: 60px;">重置</button>
+        <span id="nest_rotate_value" style="margin-left: 2px;">0</span>
+    </div>
+    <div style="text-align: center;margin-top: 20px;">
+        <input type="button" id="submit_form_compass" value="提交">
+        <div>提示：本功能需要开启指南针功能才能使用</div>
+    </div>
+</div>
+
+<div id="adjust_angle_translation" style="z-index: 999;display: none;">
+    <div>
+        <div class="input_nest_title"> y：</div>
+        <input id="input_y" type="text" readonly="">&nbsp;
+        <input type="button" id="submit_adjust_y" value="提交">
+    </div>
+    <div>
+        <span id="location_id" style="margin-left: 2px;">0</span>
+    </div>
+</div>
+
+<div id="add_360_tag" style="z-index: 999;display: none;">
+    <form id="formd_360" enctype="multipart/form-data">
+        <div>
+            *项目ID: <input id="inp_360_nest_id" name="nest_id" type="text" value="" readonly="">
+        </div>
+        <div style="display: none">
+            <input id="inp_360_base_x" name="base_x" value="1"><input id="inp_360_base_y" name="base_y" value="2">
+            <input id="inp_360_base_z" name="base_z">
+            <input id="inp_pano_id" name="pano_id">
+        </div>
+        <div id="sub_value_360">
+            *360标签名称: <input id="inp_title_360" name="title" type="text" maxlength="15" placeholder="输入标签名称,长度不超过5位">
+        </div>
+        <!--<div id="sm_product">-->
+        <!--单多品信息&nbsp;&nbsp;类型: <label for="option5"><input id="option5" type="radio" name="sub_type1" value="1"-->
+        <!--checked/>普通</label>-->
+        <!--<label for="option6"><input id="option6" type="radio" name="sub_type1" value="2"/>AR</label>-->
+        <!--<label for="option7"><input id="option7" type="radio" name="sub_type1" value="3"/>3D</label>&nbsp;-->
+        <!--ID: <input type="text" id="inp_id_1" name="obj_id1"/><button type="button" id="btn_add" value="增加">增加</button>-->
+        <!--</div>-->
+        <div style="text-align: center;">
+            <input type="button" id="submit_form_360" value="提交">&nbsp;&nbsp;<input type="button" id="cancel_add_tag_360" value="取消">
+        </div>
+    </form>
+</div>
+<div id="gui-spinner" style="display: none;">
+    <img id="gui-spinner-icon" src="https://template2.3dnest.cn/common/image/loading_74x74.png">
+</div>
+<div id="gui-message" class="message-outer darkGlass" style="display: none; background-color: rgba(255, 255, 255, 0);">
+    <h2 class="model-title">渡江战役胜利暨南京解放云展览</h2>
+
+    <div class="message-inner">
+        <div class="message-content"><a id="button-play" class="hasHover"><i class="icon icon-play"></i></a>
+            <div>浏览3D空间</div>
+        </div>
+    </div>
+    <div class="bottom-logo">
+        <div class="img onlyLogo"></div>
+    </div>
+</div>
+<div class="gui-error message-outer" style="display: none; background-color: rgba(255, 255, 255, 0);">
+    <div class="message-inner error-inner">
+        <div class="message-content">
+            <img class="error-splash" src="https://template2.3dnest.cn/common/image/splash_110x110.gif" style="height: 80px; width: auto">
+            <div class="error-problem-text">
+                <!--<p class="error-problem-textO"></p>-->
+                <!--<p class="error-problem-textT"></p>-->
+            </div>
+            <div class="error-solution-text"></div>
+            <div class="error-explanation"></div>
+            <div class="error-actions"></div>
+        </div>
+    </div>
+</div>
+<div style="display: flex;justify-content: center;">
+    <div id="initial-help" style="display: none" class="init-pc-help">
+        <div class="initial-help">
+            <img src="" alt="">
+            <p>鼠标点击行走</p>
+        </div>
+        <div class="initial-turn">
+            <img src="" alt="">
+            <p>鼠标拖拽转向</p>
+        </div>
+        <div class="initial-lord">
+            <span></span>
+            <img src="" alt="">
+            <p>3D视角</p>
+            <b>点击任意位置关闭本窗口</b>
+        </div>
+    </div>
+    <div class="nav-help-dialog pc" style="display: none;">
+        <div class="nav-help-elements">
+            <div class="close-all">
+                <div id="helpTitle" class="title">使用手册</div>
+            </div>
+            <div class="nav-help-content">
+                <div id="pc-help">
+                    <div id="pc-first">
+                        <div>
+                            <img class="pc-first1" src="https://template2.3dnest.cn/common/image/icon_pc_click_72x114.png">
+                            <p class="helpClick-move">鼠标点击行走</p>
+                        </div>
+                        <div>
+                            <img class="pc-first2" src="https://template2.3dnest.cn/common/image/icon_pc_drag_72x114.png">
+                            <p class="helpDrag-move">鼠标拖拽转向</p>
+                        </div>
+                        <div>
+                            <img class="pc-first3" src="https://template2.3dnest.cn/common/image/icon_pc_zoom.png">
+                            <p class="helpZoom-move">鼠标滚轮缩放</p>
+                        </div>
+                        <div class="line_01"></div>
+                        <div>
+                            <img class="pc-first4" src="https://template2.3dnest.cn/common/image/icon_pc_keys.png">
+                            <p class="helpKey-move">方向键行走、转向</p>
+                        </div>
+                    </div>
+                    <div id="pc-second">
+                        <div class="line_02"></div>
+                        <div>
+                            <img class="pc-second1" src="https://template2.3dnest.cn/common/image/outside_56x56.png">
+                            <p class="helpLord">3D视角</p>
+                        </div>
+                        <div>
+                            <img class="pc-second2" src="https://template2.3dnest.cn/common/image/indoor_56x56.png">
+                            <p class="helpRoam">漫游视角</p>
+                        </div>
+                        <div>
+                            <img class="pc-second3" src="https://template2.3dnest.cn/common/image/pull_56x56.png">
+                            <p class="helpChange">场景切换</p>
+                        </div>
+                        <div>
+                            <img class="pc-second4" src="https://template2.3dnest.cn/common/image/play_56x56.png">
+                            <p class="helpVisit">自动游览</p>
+                        </div>
+                        <div>
+                            <img class="pc-second5" src="https://template2.3dnest.cn/common/image/vr_56x56.png">
+                            <p class="helpVr">虚拟现实</p>
+                        </div>
+                        <div style="display: none">
+                            <img class="pc-second6" src="https://template2.3dnest.cn/common/image/icon_morehouse_56x56.png">
+                            <p class="helpMore">房源推荐</p>
+                        </div>
+                        <div>
+                            <img class="pc-second7" src="https://template2.3dnest.cn/common/image/icon_measure_56x56.png">
+                            <p class="helpMeasure">尺寸测量</p>
+                            <!--<span>(进入平面测量模式)</span>-->
+                        </div>
+                    </div>
+                </div>
+                <div id="mobile-help">
+                    <div id="middle-row">
+                        <div>
+                            <img class="middle-row1" src="https://template2.3dnest.cn/common/image/icon_phone_click_96x96.png">
+                            <p class="helpToMove">点击行走</p>
+                        </div>
+                        <div>
+                            <img class="middle-row2" src="https://template2.3dnest.cn/common/image/icon_phone_slide_96x96.png">
+                            <p class="helpToAround">滑动转向</p>
+                        </div>
+                        <div>
+                            <img class="middle-row3" src="https://template2.3dnest.cn/common/image/icon_phone_zoom_96x96.png">
+                            <p class="helpToZoom">双指缩放</p>
+                        </div>
+                    </div>
+                    <div id="middle-col">
+                        <b></b>
+                        <div>
+                            <img class="middle-col1" src="https://template2.3dnest.cn/common/image/outside_56x56.png">
+                            <p class="helpLord">3D视角</p>
+                        </div>
+                        <div>
+                            <img class="middle-col2" src="https://template2.3dnest.cn/common/image/indoor_56x56.png">
+                            <p class="helpRoam">漫游视角</p>
+                        </div>
+                        <div>
+                            <img class="middle-col3" src="https://template2.3dnest.cn/common/image/pull_56x56.png">
+                            <p class="helpChange">场景切换</p>
+                        </div>
+                        <div>
+                            <img class="middle-col4" src="https://template2.3dnest.cn/common/image/play_56x56.png">
+                            <p class="helpVisit">自动游览</p>
+                        </div>
+                        <div>
+                            <img class="middle-col5" src="https://template2.3dnest.cn/common/image/vr_56x56.png">
+                            <p class="helpVr">虚拟现实</p>
+                        </div>
+                        <div style="display: none">
+                            <img class="middle-col6" src="https://template2.3dnest.cn/common/image/icon_morehouse_56x56.png">
+                            <p class="helpMore">房源推荐</p>
+                        </div>
+                        <div>
+                            <img class="middle-col7" src="https://template2.3dnest.cn/common/image/icon_measure_56x56.png">
+                            <p class="helpMeasure">尺寸测量</p>
+                            <!--<span>(进入平面测量模式)</span>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div style="width: 100%; height: 100%;">
+    <div id="measureHelp" style="display:none">
+        <div class="measureTitle">
+            <p>测量帮助</p>
+        </div>
+        <div class="measureCon">
+            <ul>
+                <li>
+                    <span></span>
+                    <p class="measureHelpLine">测量长度，点击两点测量距离</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p class="measureHelpArea">测量面积，点击三点以上测量面积</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p class="measureHelpClear">清除测量数据</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p class="measureHelpExit">退出测量模型</p>
+                </li>
+                <li>
+                    <span></span>
+                    <p class="measureHelpAdjust">按住端点拖动，调整端点位置</p>
+                </li>
+            </ul>
+        </div>
+        <div class="measureStatement">
+            <p></p>
+        </div>
+    </div>
+    <div class="measureClose" style="display:none"></div>
+</div>
+
+
+<div class="helpclose pc" style="display: none;"></div>
+<div class="help_back" style="display: none;"></div>
+
+<div class="large-mobile-img-container" style="display: none;">
+    <div class="imgs-container">
+        <img class="large-mobile-img">
+    </div>
+</div>
+
+<div id="quick-blackout" class="quick hidden"></div>
+<div id="quick-overlay" class="quick hidden">
+    <div class="outer">
+        <div class="info desktop">点击并移动可浏览3D空间</div>
+        <div class="info mobile">点击并移动可浏览3D空间</div>
+    </div>
+</div>
+<div id="quick-logo" class="quick-brand"><img src="https://template2.3dnest.cn/common/image/logo2.png"></div>
+
+<!--[if lte IE 9]>
+<div class="gui-error message-outer darkGlass">
+<div class='message-inner'>
+    <div class='message-content' style='font-family: Helvetica Neue, sans-serif;'>
+        <div class="error-problem-text">浏览器不支持</div>
+        <div class="error-solution-text">请安装新版本浏览器浏览3D空间</div>
+        <div class="error-actions">或的更多帮助,请访问：<a class="link" target="_blank"
+                                                          href="https://www.3dnest.cn/help">疑难问题解决</a></div>
+    </div>
+</div>
+</div> <![endif]-->
+
+<div id="add_orientation">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Begin: life time stats -->
+            <h3>添加定位点</h3>
+            <form action="/nest/orientations/" class="portlet-body form" method="post">
+                <!-- BEGIN FORM-->
+                <div class="form-horizontal">
+                    <div class="form-body">
+                        <input id="inp_qw_o" name="qw" type="hidden" class="form-control">
+                        <input id="inp_qx_o" name="qx" type="hidden" class="form-control">
+                        <input id="inp_qy_o" name="qy" type="hidden" class="form-control">
+                        <input id="inp_qz_o" name="qz" type="hidden" class="form-control">
+                        <div style="clear: both;"></div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">*项目ID</label>
+                            <div class="col-md-3">
+                                <input id="inp_nest_id_o" name="nest_id" type="text" class="form-control" value="" readonly="">
+                            </div>
+                            <label class="col-md-2 control-label">*版本号</label>
+                            <div class="col-md-3">
+                                <input id="inp_rel_code_o" name="rel_code" type="text" class="form-control" value="" readonly="">
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">*场景名称</label>
+                            <div class="col-md-3">
+                                <input id="inp_title_o" name="title" type="text" class="form-control" placeholder="输入标签名称,不超过4个汉字">
+                            </div>
+                            <label class="col-md-2 control-label">*观察点</label>
+                            <div class="col-md-3">
+                                <input id="inp_location_id_o" name="location_id" type="text" class="form-control" value="" readonly="">
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">*定位点对接值</label>
+                            <div class="col-md-3">
+                                <input id="inp_key_o" name="orientation_key" type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+
+                    <div class="form-actions fluid">
+                        <div class="col-md-11" style="text-align:center">
+                            <button id="sub_add_o" type="button" class="btn blue">提交</button>&nbsp;
+                            <button id="cancel_add_o" type="button" class="btn default">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- END FORM-->
+        </div>
+        <!-- End: life time stats -->
+    </div>
+
+</div>
+
+<div id="add_scene">
+    <div class="row">
+        <div class="col-md-12">
+            <!-- Begin: life time stats -->
+            <div id="msg"></div>
+            <h3>添加场景</h3>
+            <form action="/nest/highlights/" class="portlet-body form" method="post">
+                <!-- BEGIN FORM-->
+                <div class="form-horizontal">
+                    <div class="form-body">
+                        <input id="inp_qw" name="qw" type="hidden" class="form-control">
+                        <input id="inp_qx" name="qx" type="hidden" class="form-control">
+                        <input id="inp_qy" name="qy" type="hidden" class="form-control">
+                        <input id="inp_qz" name="qz" type="hidden" class="form-control">
+                        <div style="clear: both;"></div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">*项目ID</label>
+                            <div class="col-md-3">
+                                <input id="inp_nest_id_scene" name="nest_id" type="text" class="form-control" value="" readonly="">
+                            </div>
+                            <label class="col-md-2 control-label">*版本号</label>
+                            <div class="col-md-3">
+                                <input id="inp_rel_code" name="rel_code" type="text" class="form-control" value="" readonly="">
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">*场景名称</label>
+                            <div class="col-md-3">
+                                <input id="inp_title_scene" name="title" type="text" class="form-control" placeholder="输入标签名称,不超过4个汉字">
+                            </div>
+                            <label class="col-md-2 control-label">*观察点</label>
+                            <div class="col-md-3">
+                                <input id="inp_location_id_scene" name="location_id" type="text" class="form-control" value="" readonly="">
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label">选择图片</label>
+                            <div class="col-md-2" style="margin-top: 7px;">
+                                <input type="radio" name="imgnum" value="1" checked="" class="make-switch switch-radio1"><label>图片1</label>
+                                <img class="img-responsive" src="" alt="">
+                            </div>
+                            <div class="col-md-2" style="margin-top: 7px;">
+                                <input type="radio" name="imgnum" value="2" class="make-switch switch-radio1"><label>图片2</label>
+                                <img class="img-responsive" src="" alt="">
+                            </div>
+                            <div class="col-md-2" style="margin-top: 7px;">
+                                <input type="radio" name="imgnum" value="3" class="make-switch switch-radio1"><label>图片3</label>
+                                <img class="img-responsive" src="" alt="">
+                            </div>
+                            <div class="col-md-2" style="margin-top: 7px;">
+                                <input type="radio" name="imgnum" value="4" class="make-switch switch-radio1"><label>图片4</label>
+                                <img class="img-responsive" src="" alt="">
+                            </div>
+                        </div>
+                        <div style="clear: both;"></div>
+                    </div>
+
+                    <div class="form-actions fluid">
+                        <div class="col-md-11" style="text-align:center">
+                            <button id="sub_add_scene" type="button" class="btn blue">提交</button>&nbsp;
+                            <button id="cancel_add_scene" type="button" class="btn default">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <!-- END FORM-->
+        </div>
+        <!-- End: life time stats -->
+    </div>
+
+</div>
+<div id="editversion-capture" style="display: none;">
+    <!--<a id='edit_add_tag_a' href='javascript:;'>添加标签</a><br><br>-->
+    <!--<a id='edit_add_highlight_a' href='javascript:;'>添加场景</a><BR/><BR/>-->
+    <!--<a id='edit_add_orientation_a' href='javascript:;'>添加定位点</a><BR/><BR/>-->
+</div>
+<div id="editversion-note" style="display: none;">右键添加标签或者场景</div>
+<div id="editversion-angle-note" style="display: none;">可通过修改参数值调整场景角度</div>
+<div id="info-device-orientation" style="display: none;"></div>
+<div id="tag-billboards"><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图（可放大、点击图片外任意一点返回）</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">存放物品的马袋</p><span class="tag-desc" style="line-height: 1.6;">1949年4月，第三野战军司令部参谋苏建中用来存放物品的马袋。苏建中捐赠<br><br></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图（可放大、点击图片外任意一点返回）</p><span class="tag-desc" style="line-height: 1.6;">图1、2：1947年7月23日，毛泽东致刘（伯承）邓（小平）陈（毅)粟（裕）谭（震林）并华东局的电报。复制（原件藏中央档案馆）<br>图3、4：1947年8月30日，毛泽东关于立即渡江以全力配合刘(伯承)邓(小平）问题给陈(毅)粟(裕)的电文。复制（原件藏中央档案馆）<br><br><br></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;">图1：1948年10月11日，毛泽东给饶漱石、粟裕、谭震林并告华东局、中原局《关于淮海战役的作战方针》的电报。复制（原件藏中央档案馆)<br>图2：1948年11月16日，毛泽东起草的中央军委《关于成立<br>总前委》的电报。复制（原件藏中央档案馆）<br>图3：1948年12月11日，毛泽东起草的给林彪、罗荣桓、刘亚楼《关于平津战役的作战方针》的电报。复制（原件藏中央档案馆）<br>图4：解放军总部发给国民党官兵的《罢战安全证》复制（原件藏南京市博物馆)<br>图5：华东野战军发给国民党官兵的《四大保证宣传单》<br>复制（原件藏中国国家博物馆)<br><br><br><br></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">存放物品的马袋</p><span class="tag-desc" style="line-height: 1.6;">1949年4月，第三野战军司令部参谋苏建中用来存放物品的马袋。苏建中捐赠<br><br></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;">图1：渡江战役前夕，第九兵团发给时任巢湖船舶管理处指导员任义的《关于巢湖区域内船只实行管制的命令》。任新民捐赠<br>图2：1.第三野战军政治部编印的《入城守则》王洁泉捐赠。2.解放战争时期任义的临时党员证任新民捐赠。3.那三野战军政治部编印的《入城守则和纪律》李来鸿捐赠<br>图3：渡江战役期间，第24军组织干事李幹手写的行军路线。李幹捐赠、苏北军区政治部颁发给休养所敷料员曹雪兰的立功手册曹雪兰捐赠<br>图4：1949年3月，第三野战军政治部印发的《目前部队思想<br>指导》。<br><br><br><br><br><br></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;">图1：渡江支前光荣证唐洪建捐赠<br>图2：“革命近（进）行到底”支前慰问袋<br>图3：民工誓词唐洪建捐赠<br>图4：民工立功条件 唐洪建捐赠<br>图5：渡江支前光荣证<br></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;">图1：戚卓人用来夹带信函、传递情报所用的外文书籍。戚卓人捐赠.<br>图2：中共地下情报人员王月英写给沈世猷的接头信函<br>图3：1949年初，民革成员王鼎臣在上海狱中写有联系方式的上衣内口袋。王捷捐赠<br>图4：解放战争时期，中共地下党员王国材所用的《中国共产党党章及概论》。关于修改党章的报告》。王耀中捐赠<br>图5：第29军第86师组织股股长严群贤创作的《我们不答应》歌词曲谱手稿 严群贤捐赠<br><br><br><br><br><br><br></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;">图1：解放战争时期中共南京地下党员白沙用作联络信号使用的领带<br>图5：南京解放前夕中共地下党领导工人进行护厂斗争所用的<br>护厂工具<br></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;"></p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone"><div class="tag-body"><p class="tag-label" style="line-height: 1.5; letter-spacing: 1px;">左右滑动、单击大图</p><span class="tag-desc" style="line-height: 1.6;"></span></div></div><div class="tag-container has-hotzone" style="display: none;"><div class="tag-body"><p class="tag-label">faketag</p><span class="tag-desc"></span></div></div></div>
+<div id="debug-panel" style="display: none;">
+    <div id="debug-content"></div>
+</div>
+
+<div id="map_container">
+    <div id="maptop"></div>
+    <div id="bigmap">
+        <div id="mapimg"></div>
+    </div>
+    <div id="mapbottom"></div>
+    <div id="cover"></div>
+</div>
+<div><img id="map-man" src="https://template2.3dnest.cn/common/image/man.png" style="display: none;"></div>
+
+<div id="sm_container">
+    <div id="smallmap">
+        <div id="smimg"></div>
+    </div>
+    <div id="smcover"></div>
+</div>
+<div><img id="sm-man" src="https://template2.3dnest.cn/common/image/man.png" style="display: none;width: 10px;height: 10px"></div>
+
+<div id="amap-container" class="amap-container pc" style="display:none">
+    <div id="mapdiv"></div>
+</div>
+<div class="amap-close" style="display:none"></div>
+
+<div id="iframe-parent" style="display:none">
+    <h2 class="iframeTitle"></h2>
+    <!-- <div id="iframeBox" style="overflow: auto;-webkit-overflow-scrolling:touch;">
+    <iframe class="iframe-open iframeWH" frameborder="0" allowfullscreen="true" height="100%" scrolling="no" style="width: 1px; min-width: 100%; *width: 100%;" id='iframepage' onload="iFrameHeight()"></iframe>
+  </div> -->
+    <div id="iframeBox" style="overflow: visible;-webkit-overflow-scrolling:touch;">
+        <iframe class="iframe-open iframeWH" frameborder="no" width="undefined" height="100%" id="iframepage" onload="iFrameHeight()" allowfullscreen="true" style="width: 1px; min-width: 100%; *width: 100%;" scrolling="auto"></iframe>
+    </div>
+    <div id="iframe-close" style="display:none"></div>
+</div>
+<div id="mainmenu" style="display: none; height: 100%;">
+    <div class="bplusx pc" style="display: flex;justify-content: center;flex-direction: column;align-items: center;width: 100%;">
+        <div id="meta-info" class="pc">
+            <h3 class="meta-title" style="text-align: center;">渡江战役胜利暨南京解放云展览</h3><br>
+            <div id="meta-description">身临其境参观、智慧语音导览、留存精品展陈、运营数据分析，欢迎体验手机里的博物馆</div>
+            <div id="presented-by" style="display: none;"></div>
+            <div class="contact-info"></div>
+            <div class="contact-info">
+                <div id="contact-data" style="display: block;"><span>联系方式：13901587801</span></div>
+            </div>
+            <div class="support">
+                <span id="supportTxt" style="float: left; display: none"></span><br>
+                <div style="display: flex;justify-content: center;">
+                    <img class="qrimg" style="display: block" src="https://infocdn2.3dnest.cn/8b72348a_wJ5I_b6f9/2022-02-24-18-12-02/resources/20220322063530_qr.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="b-close-parent">
+            <div id="menu-info-close" class="b-close"></div>
+        </div>
+    </div>
+</div>
+<div id="catalogue">
+    <div class="catalog">
+
+        <div class="catalogCutTitle">
+            <div class="catalogCommodity isHover">
+                <img src="https://bucket-template.oss-cn-beijing.aliyuncs.com/common/image/icon_goods_38x38_b.png">
+                <p>标签导览</p>
+            </div>
+            <div class="catalogTemplet">
+                <img src="https://bucket-template.oss-cn-beijing.aliyuncs.com/common/image/icon_room_38x38_c.png">
+                <p>更多空间</p>
+            </div>
+        </div>
+        <div class="commoditySlide">
+            <div class="swiper-container" id="swiper1">
+                <div class="swiper-wrapper" id="wrapper1"></div>
+                <div class="swiper-button-prev btn-prev1"></div>
+                <div class="swiper-button-next btn-next1"></div>
+            </div>
+            <div class="swiper-pagination" id="pagination1"></div>
+            <div class="btn-cat-play CatalogPlay" style="display: none;"></div>
+            <div class="Cat-play-background"></div>
+        </div>
+        <div class="templetSlide">
+            <div class="swiper-container" id="swiper2">
+                <div class="swiper-wrapper" id="wrapper2"></div>
+                <!--<div class="swiper-button-prev btn-prev2"></div>-->
+                <!--<div class="swiper-button-next btn-next2"></div>-->
+            </div>
+            <!--<div class="swiper-pagination" id="pagination2"></div>-->
+        </div>
+    </div>
+    <div class="breathLight" style="">
+        <span class="breathLightToRight"></span>
+    </div>
+    <div id="mobileCatalog">
+        <div class="mCatalogCutTitle">
+            <div class="mCatalogCommodity isHover">
+                <p>标签导览</p>
+            </div>
+            <div class="mCatalogTemplet">
+                <p>更多空间</p>
+            </div>
+        </div>
+        <div class="mCommoditySlide">
+            <div class="swiper-container mSwiper1">
+                <div class="swiper-wrapper mwrapper1"></div>
+            </div>
+            <div class="swiper-pagination mPagination1"></div>
+        </div>
+        <div class="mTempletSlide">
+            <div class="swiper-container mSwiper2">
+                <div class="swiper-wrapper mwrapper2"></div>
+            </div>
+            <div class="swiper-pagination mPagination2"></div>
+        </div>
+        <div class="mCatalogClose">
+            <span class="catalog-close"></span>
+        </div>
+        <div class="btn-cat-play mCatalogPlay" style="display: none;"></div>
+        <div class="m-cat-blank" style="display: none">
+            <div class="m-cat-popup">
+                <p>确定去往新空间吗？</p>
+                <b><a href="" class="hasHover">确 定</a></b>
+                <span>取 消</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="passui" style="display: none;">
+    <div class="p-container">
+        <!--<div class="p-notice">空间主人设置了密码，输入密码才能访问哦</div>-->
+        <div class="p-notice"></div>
+        <input type="password" name="pass" id="passipt" placeholder="">
+        <!--<div id="passbtn">访问模型</div><br/>-->
+        <div id="passbtn"></div><br>
+        <br>
+    </div>
+</div>
+
+<div class="compass" style="top: 10px;"></div>
+<div class="indoordir" style="top: 10px; transform: rotateZ(0.815058deg);"></div>
+<div class="indoorscale" style="top: 10px;"></div>
+
+<div class="container-adjust-color" style="display: none;z-index: 999;">
+    <div style="text-align: center;margin-top: 20px;">
+        <button id="input_color_reset" style="width: 100px;">重置当前点</button>
+        <button id="input_color_applyall" style="width: 100px;">应用到全部</button>
+        <input type="button" id="submit_form_colors" style="width: 100px;" value="提交">
+    </div>
+</div>
+
+<div id="meok" class="measure-ok" style="display: none;"></div>
+<div id="measure-back" class="measure-back" style="display: none"></div>
+
+<!--标题标签-->
+<div class="viewport">
+    <div class="viewport-tags js-tags"></div>
+</div>
+
+<!-- iframe自定义窗口标签窗口位置 -->
+<div class="weather">
+    <div class="weather_iframe">
+        <div class="weather_Title"></div>
+        <iframe id="weather_tag" src="" style="z-index: 30;background: rgba(255, 255, 255, 0);" frameborder="0" allow="autoplay"></iframe>
+    </div>
+</div>
+
+<!--<div class="btn-play2">Play2</div>-->
+<link rel="stylesheet" href="./test.css" rel="external nofollow" >
+
+<link rel="stylesheet" href="https://beyond.3dnest.cn/lib/jquery-ui/jquery-ui.min.css">
+<script src="./test.js"></script>
+<script src="./test.js"></script>
+
+<!-- <script src="./test.js"></script>  -->
+<!-- <script src="./test.js"></script> -->
+
+<!-- <script src="./test.js"></script> -->
+<!-- <script src="./test.js"></script> -->
+<script src="./test.js"></script>
+<!-- <script src="./test.js"></script> -->
+<script src="./test.js"></script>
+<script src="./test.js"></script>
+<script src="./test.js"></script>
+<script src="./test.js"></script>
+<script>
+    //若果是ie6，推荐其下载谷歌浏览器访问模型
+
+    // (function (window) {
+    //     function getBrowserInfo () {
+    //         var agent = navigator.userAgent.toLowerCase()
+    //         var regStrff = /firefox\/[\d.]+/gi
+    //         if (agent.indexOf('firefox') > 0) {
+    //             return agent.match(regStrff)
+    //         }
+    //     }
+    //     var browser = getBrowserInfo()
+    //     var verinfo = (browser + '').replace(/[^0-9.]/ig, '')
+    //     var theUA = window.navigator.userAgent.toLowerCase()
+    //     if ((theUA.match(/msie\s\d+/) && theUA.match(/msie\s\d+/)[0]) || (theUA.match(/trident\s?\d+/) && theUA.match(/trident\s?\d+/)[0])) {
+    //         var ieVersion = theUA.match(/msie\s\d+/)[0].match(/\d+/)[0] || theUA.match(/trident\s?\d+/)[0]
+    //         if (ieVersion < 7 || verinfo < '56') {
+    //             var str = '不支持当前浏览器，请点击下方链接下载谷歌浏览器访问:( ';
+    //             var str2 = "推荐使用:<a href='https://www.baidu.com/s?ie=UTF-8&wd=%E8%B0%B7%E6%AD%8C%E6%B5%8F%E8%A7%88%E5%99%A8' target='_blank' style='color:blue;'>谷歌</a>";
+    //             document.writeln("<pre style='text-align:center;color:#fff;background-color:#0cc; height:100%;border:0;position:fixed;top:0;left:0;width:100%;z-index:1234'>" +
+    //                 "<h2 style='padding-top:200px;margin:0'><strong>" + str + '<br/></strong></h2><h2>' + str2 + '</h2></pre>')
+    //             document.execCommand('Stop')
+    //         }
+    //     }
+    // }(window))
+
+
+    window.onload = function () {
+        var video1 = document.getElementById("video-tag");
+        var last1 = 0;
+
+        //当目前的播放位置已更改时
+        //此前为修改通用视频快进bug修改，现在修改通用视频可拖动进度条 播放做修改进行注释
+        // video1.ontimeupdate = function () {
+        //     var current1 = video1.currentTime;
+        //     if(current1 - last1 > 1) {//此处是限制跳过几秒 可调整
+        //         video1.currentTime = last1;
+        //     } else {
+        //         last1 = current1;
+        //     }
+        // };
+        video1.onended = function(){
+            console.log('视频播放完成')
+        }
+        var video2 = document.getElementById("commodity_video");
+        var last2 = 0;
+        //当目前的播放位置已更改时
+        // video2.ontimeupdate = function () {
+        //     var current2 = video2.currentTime;
+        //     if(current2 - last2 > 1) {//此处是限制跳过几秒 可调整
+        //         video2.currentTime = last2;
+        //     } else {
+        //         last2 = current2;
+        //     }
+        // };
+        video2.onended = function(){
+            console.log('视频播放完成')
+        }
+    }
+    // var vConsole = new VConsole();
+
+</script>
+<script src="./test.js"></script>
+<script src="./test.js"></script>
+<!-- <script src="./test.js"></script>
+<script>
+    eruda.init()
+</script> -->
+
+
+
+<div><div class="_th-container">
+    <div class="_th-click-hover _item-input">
+        x1.00
+    </div>
+    <div class="_th-item _item-x2">&gt;</div>
+    <div class="_th-item _item-x-2">&lt;</div>
+    <div class="_th-item _item-xx2">&gt;&gt;</div>
+    <div class="_th-item _item-xx-2">&lt;&lt;</div>
+    <div class="_th-item _item-reset">O</div>
+</div>
+    <div class="_th_cover-all-show-times _th_hidden">
+        <div class="_th_times">x1.00</div>
+    </div></div></body></html>
